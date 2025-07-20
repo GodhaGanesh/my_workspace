@@ -1,0 +1,487 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000;
+}
+.backpic {
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+  position: relative;
+}
+.backpic img {
+  width: 100%;
+  z-index: -1;
+}
+.backpic .shadow {
+  position: absolute;
+  z-index: -0.9;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.578) 0%,
+    rgba(0, 0, 0, 0.91) 100%
+  );
+}
+.header {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  height: 88px;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  z-index: 1;
+}
+.head {
+  width: 77.8%;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+.signin {
+  display: flex;
+  z-index: 5;
+}
+.signin button:hover,
+.allow button:hover {
+  background-color: #be0711 !important; /* Force override any conflicting styles */
+  cursor: pointer;
+}
+.head img {
+  width: 160px;
+}
+.dropdown {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px rgba(128, 128, 128, 0.578) solid;
+  color: white;
+  border-radius: calc(0.25rem - 0.0625rem);
+  width: 130px;
+  z-index: 4;
+  position: relative;
+}
+.dropdown svg {
+  color: white;
+}
+.dropdown select {
+  position: absolute;
+  border: none;
+  height: 32px;
+  width: 100%;
+  padding: 0 40px;
+  color: white;
+  background-color: transparent;
+  font-size: 15px;
+  appearance: none;
+  z-index: 1111111;
+}
+select:focus {
+  outline: 2px #fff solid;
+  outline-offset: 2px;
+  border-radius: calc(0.25rem - 0.0625rem);
+}
+select option {
+  color: black;
+}
+.get {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+  color: white;
+  margin-top: 80px;
+  z-index: 5;
+  text-align: center;
+  top: auto;
+}
+.heading h1 {
+  display: block;
+  font-size: 58px;
+  margin: -10px 0 16px 0;
+  font-weight: 900;
+  line-height: 70px;
+}
+.heading p {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 32px 0;
+}
+.heading h3,
+.last h3 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+.allow {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.allow input {
+  height: 56px;
+  width: 373px;
+  background-color: transparent;
+  padding: 24px 16px 8px;
+  color: white;
+  border: 1px rgba(128, 128, 128, 0.578) solid;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.allow label {
+  position: absolute;
+  color: rgb(156, 155, 155);
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s ease all;
+  font-size: 16px;
+  pointer-events: none;
+}
+.allow input:focus {
+  outline: 2px #fff solid;
+  outline-offset: 3px;
+  border-radius: calc(0.25rem - 0.0625rem);
+}
+.allow input:focus ~ label {
+  top: 15px;
+  font-size: 12px;
+}
+.allow button {
+  height: 56px;
+  width: 208px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e50914;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s ease all;
+}
+.signin button {
+  width: 76px;
+  height: 32px;
+  padding: 5px 4px;
+  margin-left: 15px;
+  background-color: #e50914;
+  border: none;
+  border-radius: calc(0.25rem - 0.0625rem);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  transition: 0.3s ease all;
+}
+
+.container {
+  color: white;
+  z-index: 2;
+  margin-top: -2rem;
+  width: 100%;
+  background-color: black;
+  padding: 0 9.25rem;
+}
+.content {
+  position: relative;
+  z-index: 10;
+}
+.content h2 {
+  color: white;
+  z-index: 2000;
+}
+.moviecards {
+  display: flex;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+}
+.poster {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  transition: 0.2s ease-in-out;
+}
+.poster:hover {
+  transform: scale(1.05);
+}
+.poster img {
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.poster h1 {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  color: black;
+  font-size: 6.25rem;
+  line-height: 1;
+  display: inline-block;
+  height: 1em;
+  font-weight: 900;
+  -webkit-text-stroke: 0.1rem rgb(255, 255, 255);
+  text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.reason-card {
+  display: flex;
+  gap: 17px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 64px;
+}
+.ben {
+  border-radius: 15px;
+  height: 329.333px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 229.833px;
+  padding: 24px 16px 128px 16px;
+  background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+  position: relative;
+}
+.ben h3 {
+  font-size: 24px;
+}
+.ben p {
+  font-size: 16px;
+  color: rgb(255, 255, 255, 0.7);
+  margin-top: 1rem;
+}
+.ben svg {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.question {
+  margin: 16px 0 64px 0;
+}
+.que-btn {
+  margin-top: 1rem;
+}
+.que-btn button {
+  background: #2d2d2d;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.que-btn button:hover {
+  background: #454545;
+  cursor: pointer;
+}
+.que-btn button h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+.last {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.last input {
+  width: 561.75px;
+}
+footer {
+  height: 132px;
+  position: relative;
+}
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  margin-top: 36px;
+}
+footer > li {
+  color: rgb(255, 255, 255, 0.7);
+  list-style: none;
+  margin: 36px 0 0 12px;
+}
+ul li {
+  flex: 1 1 calc(25% - 10px);
+  width: 230px;
+}
+li a {
+  color: rgb(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 21px;
+  margin: 12px 0 0 12px;
+}
+#foot {
+  margin: 36px 3px 3px 3px;
+}
+footer p {
+  color: rgb(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin: 36px 0 0 0;
+}
+.gap {
+  height: 96px;
+}
+.gradient-border {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: -15%;
+  z-index: 1;
+  height: 110px;
+  width: 130%;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  background: linear-gradient(
+    to right,
+    rgba(33, 13, 22, 1) 16%,
+    rgba(184, 40, 105, 1),
+    rgba(229, 9, 20, 1),
+    rgba(184, 40, 105, 1),
+    rgba(33, 13, 22, 1) 84%
+  );
+}
+.curve {
+  position: absolute;
+  bottom: 0;
+  height: 96.5%;
+  width: 100%;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  background: radial-gradient(
+      50% 500% at 50% -420%,
+      rgba(64, 97, 231, 0.4) 80%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    black;
+}
+@font-face {
+  font-family: "Netflix Sans";
+  font-weight: 100;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2)
+      format("woff2"),
+    url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff)
+      format("woff");
+}
+
+@font-face {
+  font-family: "Netflix Sans";
+  font-weight: 300;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2)
+      format("woff2"),
+    url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff)
+      format("woff");
+}
+
+@font-face {
+  font-family: "Netflix Sans";
+  font-weight: 400;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2)
+      format("woff2"),
+    url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff)
+      format("woff");
+}
+
+@font-face {
+  font-family: "Netflix Sans";
+  font-weight: 700;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2)
+      format("woff2"),
+    url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff)
+      format("woff");
+}
+
+@font-face {
+  font-family: "Netflix Sans";
+  font-weight: 800;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff2)
+      format("woff2"),
+    url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff)
+      format("woff");
+}
+
+@font-face {
+  font-family: "Netflix Sans";
+  font-weight: 900;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff2)
+      format("woff2"),
+    url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff)
+      format("woff");
+}
+
+@font-face {
+  font-display: optional;
+  font-family: "NKufi";
+  font-weight: 400;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/kufi/v4/HandsetSansKufiArabic-Regular.woff2)
+      format("woff2"),
+    url(https://assets.nflxext.com/ffe/siteui/fonts/kufi/v4/HandsetSansKufiArabic-Regular.woff)
+      format("woff");
+}
+
+@font-face {
+  font-display: optional;
+  font-family: "NKufi";
+  font-weight: 500;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/kufi/v4/HandsetSansKufiArabic-Bold.woff2)
+      format("woff2"),
+    url(https://assets.nflxext.com/ffe/siteui/fonts/kufi/v4/HandsetSansKufiArabic-Bold.woff)
+      format("woff");
+}
+@font-face {
+  font-display: optional;
+  font-family: "GraphikTH";
+  font-weight: 400;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/graphik/v2/GraphikTH-Medium.woff2)
+      format("woff2"),
+    url(https://assets.nflxext.com/ffe/siteui/fonts/graphik/v2/GraphikTH-Medium.woff)
+      format("woff");
+}
+@font-face {
+  font-display: optional;
+  font-family: "GraphikTH";
+  font-weight: 500;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/graphik/v2/GraphikTH-Bold.woff2)
+      format("woff2"),
+    url(https://assets.nflxext.com/ffe/siteui/fonts/graphik/v2/GraphikTH-Bold.woff)
+      format("woff");
+}
+.dropdown,
+select option,
+.get,
+.heading h1,
+.signin button,
+.container,
+.poster h1,
+.que-btn button,
+footer > p {
+  font-family: "Netflix Sans", Arial, Helvetica, sans-serif;
+}

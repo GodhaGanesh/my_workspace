@@ -1,0 +1,511 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: #fff;
+}
+.header{
+    height: 76px;
+    width: 100%;
+    display: flex;
+    box-shadow: 0.01px 0 3px black;
+}
+.header img{
+    height: 62px;
+    width: auto;
+    margin: 7px;
+}
+.navigation{
+    width: 100%;
+    display: flex;
+    gap: 55px;
+    align-items: center;
+    justify-content: center;
+}
+.navigation p{
+    font-size: .9375rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.cards{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wealth{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border: 1px solid #979797;
+    border-radius: 12px;
+    box-shadow: none;
+    flex: 1;
+    height: 275px;
+    margin: 0 12px;
+    padding: 32px 0 16px;
+    transition: all .2s ease-in-out;
+}
+.wealth h2{
+    color: #361968;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.33;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+.wealth p{
+    color: #5f34a8;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    font-size: 35px;
+}
+.cards .wealth:first-child{
+    background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNjIiIGhlaWdodD0iMzEwIiBmaWxsPSJub25lIiB2aWV3Qm94PSIwIDAgMzYyIDMxMCI+PG1hc2sgaWQ9InByZWZpeF9fYSIgd2lkdGg9IjM2MiIgaGVpZ2h0PSIzMTAiIHg9IjAiIHk9IjAiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHN0eWxlPSJtYXNrLXR5cGU6YWxwaGEiPjxyZWN0IHdpZHRoPSIzNjIiIGhlaWdodD0iMzEwIiBmaWxsPSIjZmZmIiByeD0iMTYiLz48cmVjdCB3aWR0aD0iMzYxIiBoZWlnaHQ9IjMwOSIgeD0iLjUiIHk9Ii41IiBzdHJva2U9IiMwNTAyMEEiIHN0cm9rZS1vcGFjaXR5PSIuMiIgcng9IjE1LjUiLz48L21hc2s+PGcgbWFzaz0idXJsKCNwcmVmaXhfX2EpIj48cGF0aCBmaWxsPSIjRThGQ0ZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xODEuMDQ5IDIwN0M4MS4wNzggMjA3IC4wMjUgMTI1Ljk3MyAwIDI2LjAwMlYtMjAwLjUxaDM2MlYyNi4wMDJjLjAyNyA5OS45MzQtODAuOTY3IDE4MC45NzItMTgwLjkwMyAxODAuOTk4aC0uMDQ4WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9nPjxwYXRoIGZpbGw9InVybCgjcHJlZml4X19iKSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMjA0LjU0IDE4Mi45MzRjMTUuMjQzLTcuMzI1IDI4LjIyLTE4Ljg4NSAzNi40MTUtMzMuODEyIDkuOTYxLTE4LjE0NSA4LjgzOC0zNy4wNDIgOC44MzgtNTcuMnYtMzAuMDVDMjAxLjEzMyA1OC4wMzggMTgwLjkxNyAzMSAxODAuOTE3IDMxcy0yMC4yMTkgMjcuMDM4LTY4Ljg3OSAzMC44NzJ2MzAuMDVjMCAyMC4xNTgtMS4xMTkgMzkuMDU1IDguODQ0IDU3LjIgOC4xOSAxNC45MjcgMjEuMTcyIDI2LjQ4NyAzNi40MDkgMzMuODEyIDcuNTQ1IDMuNjI1IDE1LjQ1NSA2LjI0MyAyMy42MSA4LjA2NiA4LjE1NC0xLjgyMiAxNi4wOTQtNC40NCAyMy42MzktOC4wNjZaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBmaWxsPSIjMzYxODY5IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xODEuMzk4IDE5MWM4LjA5Ni0xLjgyMiAxNS45NzktNC40NCAyMy40Ny04LjA2NSAxNS4xMzEtNy4zMjUgMjguMDE1LTE4Ljg4NiAzNi4xNTEtMzMuODEyIDkuODg5LTE4LjE0NiA4Ljc3Ni0zNy4wNDMgOC43NzYtNTcuMnYtMzAuMDVDMjAxLjQ4NSA1OC4wMzggMTgxLjQxNCAzMSAxODEuNDE0IDMxbC0uMDE2IDE2MFoiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjxwYXRoIGZpbGw9IiNGREFENzgiIGQ9Ik0xODEuNDA5IDEzNi43NDRjMTAuMzk2IDAgMTguODIzLTguNDI3IDE4LjgyMy0xOC44MjNzLTguNDI3LTE4LjgyMy0xOC44MjMtMTguODIzLTE4LjgyMyA4LjQyNy0xOC44MjMgMTguODIzIDguNDI3IDE4LjgyMyAxOC44MjMgMTguODIzWiIvPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0icHJlZml4X19iIiB4MT0iNzAwMy41NyIgeDI9IjcwMDMuNTciIHkxPSIzMSIgeTI9IjE2MDMxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agc3RvcC1jb2xvcj0iIzg0NTNGMCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzM2MTg2OSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjwvc3ZnPg==");
+    background-size: cover;
+    background-position: top -16px center;
+    background-repeat: no-repeat;
+}
+.cards .wealth:nth-child(2){
+    background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNjIiIGhlaWdodD0iMzEwIiBmaWxsPSJub25lIiB2aWV3Qm94PSIwIDAgMzYyIDMxMCI+PG1hc2sgaWQ9InByZWZpeF9fYSIgd2lkdGg9IjM2MiIgaGVpZ2h0PSIzMTAiIHg9IjAiIHk9IjAiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHN0eWxlPSJtYXNrLXR5cGU6YWxwaGEiPjxyZWN0IHdpZHRoPSIzNjIiIGhlaWdodD0iMzEwIiBmaWxsPSIjZmZmIiByeD0iMTYiLz48cmVjdCB3aWR0aD0iMzYxIiBoZWlnaHQ9IjMwOSIgeD0iLjUiIHk9Ii41IiBzdHJva2U9IiMwNTAyMEEiIHN0cm9rZS1vcGFjaXR5PSIuMiIgcng9IjE1LjUiLz48L21hc2s+PGcgbWFzaz0idXJsKCNwcmVmaXhfX2EpIj48cGF0aCBmaWxsPSIjRkY2OTAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xODEuMDQ5IDIwNi41MUM4MS4wNzggMjA2LjUxLjAyNSAxMjUuNDgyIDAgMjUuNTEydi0yMjYuNTEzaDM2MlYyNS41MTJjLjAyNyA5OS45MzQtODAuOTY3IDE4MC45NzEtMTgwLjkwMyAxODAuOTk4aC0uMDQ4WiIgY2xpcC1ydWxlPSJldmVub2RkIiBvcGFjaXR5PSIuMDUiLz48L2c+PHBhdGggZmlsbD0iI0RFQkRDNyIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMjgyIDE1Ny41YzAgMi40ODUtNDQuOTk1IDQuNS0xMDAuNSA0LjVTODEgMTU5Ljk4NSA4MSAxNTcuNXM0NC45OTUtNC41IDEwMC41LTQuNSAxMDAuNSAyLjAxNSAxMDAuNSA0LjVaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBmaWxsPSIjRkY3NTcyIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04OC4wMDYgMTU3aDEyMS45ODhhMi4wMDggMi4wMDggMCAwIDAgMS40MTUtLjU4IDIuMDAzIDIuMDAzIDAgMCAwIC41OTEtMS40MVYxMzZIODZ2MTkuMDFjMCAxLjA5OS44OTggMS45OSAyLjAwNiAxLjk5Wk0xNDIgMTM2aDEzMVY1MkgxNDYuNTRhNC41NCA0LjU0IDAgMCAwLTQuNTQgNC41MzhWMTM2WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PHBhdGggZmlsbD0iIzlFNDE3OCIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTUxIDEzNWgxMTNWNjFIMTUxdjc0WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PHBhdGggZmlsbD0iI0RCNUU1RSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMjExIDE1N2g1Ny45NjJjMi4yMyAwIDQuMDM4LTEuNzkyIDQuMDM4LTQuMDA0VjEzNmgtNjJ2MjFaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBmaWxsPSIjREI1RTVFIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNzEgMTM4aDYuNDljMi40OSAwIDQuNTEtMS45MSA0LjUxLTQuMjY3VjU2LjI2N2MwLTIuMzU3LTIuMDItNC4yNjctNC41MS00LjI2N0gyNzF2ODZaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBzdHJva2U9IiNGRjc1NzIiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iOCIgZD0iTTIyNyA0OVYzNmgtMzl2MTMiLz48cGF0aCBmaWxsPSIjOUU0MTc4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xODMgMTI3aDM0di03aC0zNHY3WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PHBhdGggZmlsbD0iIzc5MkM1NiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTg4IDEyMHY3LTdabTggMHY3LTdabTcgMHY3LTdabTkgMHY3LTdaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBmaWxsPSIjOUU0MTc4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xODIgMTM1aDM0di03aC0zNHY3WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PHBhdGggZmlsbD0iIzc5MkM1NiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTg4IDEyOHY3LTdabTggMHY3LTdabTcgMHY3LTdabTkgMHY3LTdaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBmaWxsPSIjOUU0MTc4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xODMgMTI4aDM0di0xaC0zNHYxWm0tNDEgMGgzNHYtN2gtMzR2N1oiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjxwYXRoIGZpbGw9IiM3OTJDNTYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTE0OSAxMjF2Ny03Wm03IDB2Ny03Wm03IDB2Ny03Wm03IDB2Ny03WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PHBhdGggZmlsbD0iIzlFNDE3OCIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTQyIDEyMGgzNHYtN2gtMzR2N1ptOC03djctN1ptNyAwdjctN1ptNyAwdjctN1ptNyAwdjctN1ptLTI5IDIyaDM0di03aC0zNHY3WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PHBhdGggZmlsbD0iIzc5MkM1NiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTQ5IDEyOHY3LTdabTcgMHY3LTdabTcgMHY3LTdabTcgMHY3LTdaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBmaWxsPSIjOUU0MTc4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNDIgMTIxaDM0di0xaC0zNHYxWm0wIDhoMzR2LTFoLTM0djFaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBmaWxsPSIjRkFCNDZEIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNDAgMTI4aDM0di03aC0zNHY3Wm04MS0zaDM0di03aC0zNHY3WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PHBhdGggc3Ryb2tlPSIjREU4MTMxIiBzdHJva2Utd2lkdGg9Ii45MDgiIGQ9Ik0xNDYgMTIxdjdtODItMTB2N20tNzUtNHY3bTgyLTEwdjdtLTc0LTR2N204MS0xMHY3bS03NC00djdtODEtMTB2NyIvPjxwYXRoIGZpbGw9IiNGQUI0NkQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTE0MCAxMjBoMzR2LTdoLTM0djdabTgxLTJoMzR2LTdoLTM0djdaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBzdHJva2U9IiNERTgxMzEiIHN0cm9rZS13aWR0aD0iLjkwOCIgZD0iTTE0NyAxMTN2N204Mi05djdtLTc1LTV2N204MS05djdtLTczLTV2N204MS05djdtLTc0LTV2N204MS05djciLz48cGF0aCBmaWxsPSIjRkFCNDZEIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNDAgMTM1aDM0di03aC0zNHY3Wm04MS0yaDM0di03aC0zNHY3WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PHBhdGggc3Ryb2tlPSIjREU4MTMxIiBzdHJva2Utd2lkdGg9Ii45MDgiIGQ9Ik0xNDYgMTI4djdtODItOXY3bS03NS01djdtODItOXY3bS03NC01djdtODEtOXY3bS03NC01djdtODEtOXY3Ii8+PHBhdGggZmlsbD0iIzlFNDE3OCIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTQwIDEyMWgzNHYtMWgtMzR2MVptODEtM2gzNHYtMWgtMzR2MVptLTgxIDExaDM0di0xaC0zNHYxWm04MS0zaDM0di0xaC0zNHYxWiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PHBhdGggZmlsbD0iI0ZBQjQ2RCIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTgwIDEyN2gzNHYtN2gtMzR2N1oiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjxwYXRoIHN0cm9rZT0iI0RFODEzMSIgc3Ryb2tlLXdpZHRoPSIuOTA4IiBkPSJNMTg2IDEyMHY3bTctN3Y3bTctN3Y3bTctN3Y3Ii8+PHBhdGggZmlsbD0iI0ZBQjQ2RCIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTc5IDEzNWgzNHYtN2gtMzR2N1oiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjxwYXRoIHN0cm9rZT0iI0RFODEzMSIgc3Ryb2tlLXdpZHRoPSIuOTA4IiBkPSJNMTg2IDEyOHY3bTctN3Y3bTctN3Y3bTctN3Y3Ii8+PHBhdGggZmlsbD0iIzlFNDE3OCIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTgwIDEyOGgzNHYtMWgtMzR2MVoiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjxwYXRoIGZpbGw9IiNGQUI0NkQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTE4MCAxMTJoMzR2LTdoLTM0djdaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBzdHJva2U9IiNERTgxMzEiIHN0cm9rZS13aWR0aD0iLjkwOCIgZD0iTTE4NiAxMDV2N203LTd2N203LTd2N203LTd2NyIvPjxwYXRoIGZpbGw9IiNGQUI0NkQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTE3OSAxMTloMzR2LTdoLTM0djdaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBzdHJva2U9IiNERTgxMzEiIHN0cm9rZS13aWR0aD0iLjkwOCIgZD0iTTE4NiAxMTJ2N203LTd2N203LTd2N203LTd2NyIvPjxwYXRoIGZpbGw9IiM5RTQxNzgiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTE4MCAxMTJoMzR2LTFoLTM0djFabS05NSAyNWgxMzh2LTRIODV2NFoiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjxwYXRoIGZpbGw9IiM0NTIyNzciIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTIxNi4xNDggMTA5LjI1OWgtLjA1NWwuMDU1LS4wMjJ2LjAyMlpNMjE0LjM5NyAxMThzMS4yMDMtNS43MDYgMS4yOTEtNy44NjVjMS42NDktLjEyIDYuMzEyLTEuNDMzIDYuMzEyLTEuNDMzLS40LS4yMDItNS4yMTMtMS41Ny02LjE0Ny0xLjgzNS0uMDQyLS40NS0uNjktNy40MTgtLjg3My03Ljg2NyAwIDAtMS42MzcgNi4wMzMtMS42NzUgNy43MzVsLjAzMy4wMDItLjAyNS4wMTdjLS43ODIuMTY2LTUuODkyIDEuMjUtNi4zMTMgMS40MjkgMCAwIDQuMjg1IDEuNTI0IDYuMDQyIDEuODMuMTk4IDEuMzEyIDEuMTUyIDcuNTYyIDEuMzU1IDcuOTg3WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PHBhdGggZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMjE1LjE0OCAxMDguMjU5aC0uMDU1bC4wNTUtLjAyMnYuMDIyWm0tMS43NSA4Ljc0MXMxLjIwMi01LjcwNiAxLjI5LTcuODY1YzEuNjQ5LS4xMiA2LjMxMi0xLjQzMyA2LjMxMi0xLjQzMy0uNC0uMjAyLTUuMjEzLTEuNTctNi4xNDctMS44MzUtLjA0Mi0uNDUtLjY5LTcuNDE4LS44NzMtNy44NjcgMCAwLTEuNjM3IDYuMDMzLTEuNjc1IDcuNzM1bC4wMzMuMDAyLS4wMjUuMDE3Yy0uNzgyLjE2Ni01Ljg5MiAxLjI1LTYuMzEzIDEuNDI5IDAgMCA0LjI4NSAxLjUyNCA2LjA0MiAxLjgzLjE5OCAxLjMxMiAxLjE1MyA3LjU2MiAxLjM1NiA3Ljk4N1oiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==");
+    background-size: cover;
+    background-position: top -16px center;
+    background-repeat: no-repeat;
+}
+.cards .wealth:last-child{
+    background-image: url("https://www.phonepe.com/webstatic/8712/static/credit-hp-card-e94cb11bd212e8ffa2c99f5a303c269a.svg");
+    background-size: cover;
+    background-position: top -16px center;
+    background-repeat: no-repeat;
+}
+.content {
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.written{
+    width: 520px;
+    padding: 20px;
+}
+.written h1{
+    font-family: Poppins,sans-serif, Helvetica,Arial;
+    color: #361374;
+    font-size: 2.4rem;
+    font-weight: 510;
+    letter-spacing: -.57px;
+    line-height: 1.12;
+    margin: 27px 0;
+}
+.written p{
+    color: rgba(35, 32, 45, 0.484);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 14px 0 20px 0;
+}
+video{
+    border: none;
+}
+.two {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.written h2{
+    margin: 18px 0;
+    font-size: 22px;
+}
+.ad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+    margin: 0 auto;
+}
+img[alt="Insurance"]{
+    margin-top: 60px;
+    width: 100%;
+}
+#pp{
+    width: 170px;
+}
+.gallery{
+    margin-top: 70px;
+    margin: auto;
+    width: 1217px;
+    height: 500px;
+}
+.vid{
+    border-radius: 9%;
+    overflow: hidden;
+    width: 450px;
+    height: 450px;
+    box-shadow: 0 0 30px 0px #0000009e;
+}
+.first{
+    position: absolute;
+    transform: scale(0.8);
+    filter: brightness(0.6);
+}
+.second{
+    position: absolute;
+    transform: scale(0.9);
+    margin:  0 200px;
+    filter: brightness(0.6);
+}
+.third{
+    position: absolute;
+    transform:scale3d(1,1,1);
+    margin: 0 400px;
+    z-index: 1;
+}
+.fourth{
+    position: absolute;
+    transform: scale(0.9);
+    margin: 0 600px;
+    filter: brightness(0.6);
+}
+.fifth{
+    position: absolute;
+    transform: scale(0.8);
+    margin: 0 800px;
+    filter: brightness(0.6);
+    z-index: -1;
+}
+.KarteJaBadhteJa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 154px;
+}
+.KarteJaBadhteJa button{
+    height: 36px;
+    width: 244px;
+    border: solid 1px #533093;
+    border-radius: 18px;
+    background-color: transparent;
+    color: #533093;
+    margin-bottom: 25px;
+    padding: 0 16px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+}
+.KarteJaBadhteJa button:hover{
+    background-color: #533093;
+    color: white;
+    cursor: pointer;
+}
+.KarteJaBadhteJa p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2;
+    opacity: .8;
+    text-align: center;
+}
+.KarteJaBadhteJa p:last-child{
+    color: #6b35a9;
+}
+.secure{
+    display: flex;
+    gap: 208px;
+    background-color: #967edd;
+    background-image: url("https://www.phonepe.com/webstatic/8722/static/trust-banner-861f26253b71e00c083fd5f6c2ea30fc.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right 38px top -4px;
+    border-radius: 32px;
+    margin-top: 138px;
+    padding: 22px;
+    width: 100%;
+    height: 332.28px;
+    position: relative;
+    z-index: 1;
+}
+.sec{
+    margin: 35px 0 0 49px;
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+.sec img{
+    width: 100%;
+    position: absolute;
+}
+.explain h2{
+    color: white;
+    font-size: 40px;
+    margin: 33px 0 8px 0;
+}
+.explain p{
+    font-size: 20px;
+    color: #fff;
+    margin: 20px 0;
+    line-height: 34px;
+}
+.explain img{
+    width: 100px;
+    margin-top: 62px;
+}
+.explain img:last-child{
+    margin-left: 32px;
+}
+.partner{
+    z-index: 0;
+    position: relative;
+    top: -25px;
+    background: linear-gradient(#ddd8fa, #fff);
+    margin-bottom: 100px;
+    padding-top: 80px;
+    text-align: center;
+    width: 100%;
+}
+.partner h2{
+    color: #361374;
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: -0.63px;
+    line-height: 58.8px;
+    margin: 35px 0;
+}
+.partner>img{
+    margin-top: 30px;
+    width: 100%;
+}
+.partner button{
+    background-color: rgb(7, 195, 222);
+    color: white;
+    height: 60px;
+    width: 230px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px 0 25px;
+    border: none;
+    border-radius: 33px;
+    transition: 0.3s ease-in-out;
+}
+.partner button:hover{
+    background-color: #10d6f2;
+    box-shadow: 0 17px 24px 0 rgba(162, 224, 217, 0), 0 5px 12px 0 rgba(48, 229, 252, .5);
+    cursor: pointer;
+}
+.partner button:hover  img{
+    margin-left: 10px;
+}
+.partner button img{
+    width: 33px;
+    vertical-align: middle;
+    transition: 0.3s ease-in-out;
+}
+.business{
+    display: flex;
+    gap: 125px;
+}
+.banner{
+    display: flex;
+    position: relative;
+}
+.banner img:first-child{
+    width: 633.49px;
+    position: relative;
+}
+.banner img:last-child{
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: -65px;
+}
+.neg{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.see{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.neg h2{
+    color: #361968;
+    font-size: 40px;
+    font-weight: 500;
+    margin: 33px 0;
+    text-shadow: rgba(0,0, 0, 0.05 ) 0px 2px 4px;
+}
+.neg p{
+    color: #333;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.33px;
+    line-height: 30.08px;
+    margin: 7px 0 16px 0;
+}
+.neg h3{
+    margin: 22px 0px;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.33px;
+    line-height: 25.3px;
+    color: #323232;
+}
+.point{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    width:100%;
+    cursor: pointer;
+}
+.point:hover img{
+    margin-right: -10px;
+}
+.point img{
+    transition: 0.3s ease-in-out;
+}
+.point h4{
+    font-size: 18px;
+    font-weight: 500;
+    color: #6739b7;
+}
+.point p{
+    margin-top: -1px;
+}
+#rendu,#mudu,#okati{
+    border-bottom: 1px solid black;
+}
+.indiacust{
+    background-color: #7962be;
+    background-image: url("https://www.phonepe.com/webstatic/8750/static/stats-desktop-d03f14dfb53bebd5b23b63dd8e464adb.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 444px;
+    margin: 130px 0 0 0;
+}
+.text{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    top: 15%;
+}
+.indi{
+    width: 254px;
+}
+.indi p{
+    font-size: 20px;
+    font-weight: 100;
+    color: #dcd3ff;
+}
+.indi h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+}
+.btn{
+    display: flex;
+    position: relative;
+    top: 89px;
+    left: -30px;
+    bottom: -88.8px;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.btn h3{
+    margin: 26px 0;
+    font-size: 26px;
+    font-weight: 500;
+    color: #d4cbff;
+}
+.btn button{
+    background-color: transparent;
+    font-size: 16px;
+    color: white;
+    line-height: 33px;
+    padding: 0 24px;
+    height: 40px;
+    width: 173px;
+    border-radius: 33px;
+    border: #4cdeff 2px solid;
+}
+.footer{
+    height: 421px;
+    width: 100%;
+    display: flex;
+    margin-top: 55px;
+}
+.partion{
+    width:165.146px;
+    margin: 0 8px;
+}
+.partion img{
+    width: 100%;
+}
+.partion h3{
+    margin: 18px 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+.partion ul{
+    list-style: none;
+}
+
+ul li{
+    width: 100%;
+    margin: 12.5px 4px;
+}
+ul a{
+    font-size: 13px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #000;
+}
+.socialmedia{
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.socialmedia img{
+    width: 34px;
+    margin: 0 10px;
+}
+.copy p{
+    text-align: center;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 20px 0 60px 0;
+}
+.wealth:hover{
+    box-shadow: 0 19px 25px 0 rgba(0, 0, 0, .19);
+    cursor: pointer;
+    border: none;
+}
+.navigation p:hover{
+    color: #5f259f;
+    cursor: pointer;
+}
+ul li a:hover,.partion h3:hover{
+    color: #6739b7;
+    cursor: pointer;
+}

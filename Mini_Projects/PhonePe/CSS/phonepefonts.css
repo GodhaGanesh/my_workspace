@@ -1,0 +1,43 @@
+@font-face {
+    font-display: swap;
+    font-family: PhonePeSans;
+    font-style: normal;
+    font-weight: 300;
+    src: url("https://www.phonepe.com/webstatic/8712/static/PhonePeSans-Light-d84c55360ce241e165c7b10f0e143df2.woff2") format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: PhonePeSans;
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://www.phonepe.com/webstatic/8712/static/PhonePeSans-Regular-00e335472573f867945b9dc74d9f23a7.woff2") format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: PhonePeSans;
+    font-style: normal;
+    font-weight: 500;
+    src: url("https://www.phonepe.com/webstatic/8712/static/PhonePeSans-Medium-2c1ed5081892b87cddccba2c1e2c1030.woff2") format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: PhonePeSans;
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://www.phonepe.com/webstatic/8712/static/PhonePeSans-Bold-3bc29f20b4df86219a0a40c7fe23d19c.woff2") format("woff2")
+}
+
+.navigation p,.wealth h2,.KarteJaBadhteJa p,.KarteJaBadhteJa button,.partner button p,.partner button,.indi p{
+    font-family: PhonePeSans,sans-serif, Helvetica,Arial;
+}
+.written h2{
+    font-family: Poppins,sans-serif, Helvetica,Arial;
+    font-size: 22px;
+    font-weight: 400;
+}
+.explain h2,.explain p,.partner h2,.partner button,.neg,.con p,.indi h2,.btn h3,ul a,.partion h3,.copy p{
+    font-family: Poppins,sans-serif,Arial, Helvetica, sans-serif;
+}

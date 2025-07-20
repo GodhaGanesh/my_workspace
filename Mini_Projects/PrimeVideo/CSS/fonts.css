@@ -1,0 +1,34 @@
+@font-face {
+    font-display: swap;
+    font-family: Amazon Ember;
+    font-style: 400;
+    src: url(https://m.media-amazon.com/images/I/61iVPQjQNXL.eot?amazonember_rg) format("eot"), url(https://m.media-amazon.com/images/I/51Ja06DDSWL.woff?amazonember_rg) format("woff"), url(https://m.media-amazon.com/images/I/5167G3DwWTL.woff2?amazonember_rg) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Amazon Ember;
+    font-weight: 500;
+    src: url(https://m.media-amazon.com/images/I/51gMsQRcYNL.eot?amazonember_sbd) format("eot"), url(https://m.media-amazon.com/images/I/513caHLRc+L.woff?amazonember_sbd) format("woff"), url(https://m.media-amazon.com/images/I/41dxSi+IUpL.woff2?amazonember_sbd) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Amazon Ember;
+    font-weight: 700;
+    src: url(https://m.media-amazon.com/images/I/619uFRMC7PL.eot?amazonember_bd) format("eot"), url(https://m.media-amazon.com/images/I/51f91HNnSFL.woff?amazonember_bd) format("woff"), url(https://m.media-amazon.com/images/I/51J9qU3t-IL.woff2?amazonember_bd) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Amazon Ember;
+    font-weight: 900;
+    src: url(https://m.media-amazon.com/images/I/617A+VKVSYL.eot?amazonember_he) format("eot"), url(https://m.media-amazon.com/images/I/51wmERICL+L.woff?amazonember_he) format("woff"), url(https://m.media-amazon.com/images/I/515UizubSyL.woff2?amazonember_he) format("woff2")
+}
+body {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    color: white;
+}
+nav button {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+}
