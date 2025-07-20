@@ -1,0 +1,12 @@
+package oops_programming_style7;
+
+public class Author {
+	private static String[] authors = {"chethan barath","sudha murthy","anitha desai", "vikram seth"};
+	private String name;
+	private int age;
+	private int booksCount;
+	
+	public Author(String authorName,int authorAge, int authorBooksCount) {
+		if()
+	}
+}

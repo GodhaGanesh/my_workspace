@@ -1,0 +1,7 @@
+package oops_programming_style3;
+
+public class TrainValidation {
+	public static void verifyDestination(String destination) {
+		
+	}
+}

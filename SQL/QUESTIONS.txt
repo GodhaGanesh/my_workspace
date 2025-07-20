@@ -1,0 +1,10 @@
+1) WAQTD details who are from andhra pradesh
+2)WAQTD DELIVERED ITEMS 
+3)WAQTD TOTAL PRICE OF ORDER 
+4)WAQTD THE TOTAL AMOUNT WE GET FROM SALES
+5)WAQTD THE EXPECTED PROFIT (PRICE - COGS) OF A PRODUCT
+6)WAQTD HOW MANY DAYS IN BETWEEN ODATE AND PERCENT DATE
+7)WAQTD 
+WAQTD name and phone number of customer who ordered above 5,000 worth items
+WAQTD THE Products in desending order which product has high sales
+WAQTD 

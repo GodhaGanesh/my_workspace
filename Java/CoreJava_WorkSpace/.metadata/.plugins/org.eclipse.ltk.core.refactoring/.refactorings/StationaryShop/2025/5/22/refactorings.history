@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;StationaryShop/src/oops_programming_style3&apos;&#x0D;&#x0A;- Original project: &apos;StationaryShop&apos;&#x0D;&#x0A;- Destination element: &apos;StationaryShop/src/oops_programming_style3&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     oops_programming_style2.Book.java&#x0D;&#x0A;     oops_programming_style2.DriverClass.java" description="Copy compilation units" destination="/src&lt;oops_programming_style3" element1="/src&lt;oops_programming_style2{Book.java" element2="/src&lt;oops_programming_style2{DriverClass.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1748493741629" units="2" version="1.0"/>
+</session>

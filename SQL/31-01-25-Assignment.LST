@@ -1,0 +1,140 @@
+SELECT MAX(SAL)
+  2  FROM EMP
+  3  WHERE SAL < (SELECT MAX(SAL)
+  4            FROM EMP);
+
+  MAX(SAL)                                                                      
+----------                                                                      
+      3000                                                                      
+
+SQL> SELECT MAX(SAL)
+  2  FROM EMP
+  3  WHERE SAL < (SELECT MAX(SAL)
+  4            FROM EMP
+  5             WHERE SAL< (SELECT MAX(SAL)
+  6                                                         FROM EMP
+  7                                                         WHERE SAL < (SELECT MAX(SAL)
+  8                                                                   FROM EMP
+  9                                                                   WHERE SAL< (SELECT MAX(SAL)
+ 10                                                                                                                FROM EMP))));
+
+  MAX(SAL)                                                                      
+----------                                                                      
+      2450                                                                      
+
+SQL> SELECT ENAME
+  2  FROM EMP
+  3  WHERE SAL = (SELECT MAX(SAL)
+  4            FROM EMP
+  5             WHERE SAL< (SELECT MAX(SAL)
+  6                                                         FROM EMP
+  7                                                         WHERE SAL < (SELECT MAX(SAL)
+  8                                                                   FROM EMP)));
+
+ENAME                                                                           
+----------                                                                      
+JONES                                                                           
+
+SQL> SELECT ENAME
+  2  FROM EMP
+  3  WHERE SAL = (SELECT MAX(SAL)
+  4            FROM EMP
+  5             WHERE SAL< (SELECT MAX(SAL)
+  6                                                         FROM EMP));
+
+ENAME                                                                           
+----------                                                                      
+SCOTT                                                                           
+FORD                                                                            
+
+SQL> SELECT EMPNO
+  2  FROM EMP
+  3  WHERE SAL = (SELECT MAX(SAL)
+  4            FROM EMP
+  5             WHERE SAL< (SELECT MAX(SAL)
+  6                         FROM EMP));
+
+     EMPNO                                                                      
+----------                                                                      
+      7788                                                                      
+      7902                                                                      
+
+SQL> SELECT DNAME
+  2  FROM DEPT
+  3  WHERE DEPTNO = (SELECT DEPTNO
+  4            FROM EMP
+  5             WHERE SAL IN (SELECT MAX(SAL)
+  6                                                         FROM EMP)
+  7                                                         WHERE SAL< (SELECT MAX(SAL)
+  8                                                                                     FROM EMP)
+  9                                                                                       WHERE SAL< (SELECT MAX(SAL)
+ 10                                                                                                                  FROM EMP)
+ 11                                                                                                                  WHERE SAL< (SELECT MAX(SAL)
+ 12                                                              FROM EMP));
+                                                       WHERE SAL< (SELECT MAX(SAL)
+                                                       *
+ERROR at line 7:
+ORA-00907: missing right parenthesis 
+
+
+SQL> SELECT DNAME
+  2  FROM DEPT
+  3  WHERE DEPTNO = (SELECT DEPTNO
+  4            FROM EMP
+  5             WHERE SAL IN (SELECT MAX(SAL)
+  6                                                         FROM EMP
+  7                                                         WHERE SAL< (SELECT MAX(SAL)
+  8                                                                                     FROM EMP
+  9                                                                                       WHERE SAL< (SELECT MAX(SAL)
+ 10                                                                                                                  FROM EMP
+ 11                                                                                                                  WHERE SAL< (SELECT MAX(SAL)
+ 12                                                              FROM EMP)))));
+
+DNAME                                                                           
+--------------                                                                  
+SALES                                                                           
+
+SQL> SPOOL OFF
+
+* SELECT HIREDATE
+FROM EMP
+ORDER BY HIREDATE ASC
+LIMIT 1
+OFFSET 1;
+
+* SELECT ENAME
+FROM EMP
+ORDER BY HIREDATE DESC
+LIMIT 1
+OFFSET 1;
+
+* SELECT LOC
+FROM DEPT
+WHERE DEPTNO IN (SELECT DEPTNO
+			FROM EMP
+			ORDER BY HIREDATE ASC
+ 			LIMIT 1);
+
+* SELECT * FROM EMP
+OREDER BY SAL ASC
+LIMIT 1
+OFFSET 6;
+
+* SELECT DNAME FROM DEPT
+WHERE SAL = (SELECT MAX(SAL)
+		  FROM EMP
+		  ORDER BY SAL
+		   LIMIT 1
+		  OFFSET 1;
+* SELECT ENAME
+FROM EMP
+WHERE EMPN = (SELECT MGR
+		   FROM EMP
+		    WHERE ENAME = ‘SMITH’);
+* SELECT ENAME
+FROM EMP
+WHERE EMPNO = (SELECT MGR
+		   FROM EMP
+		    WHERE EMPNO = (SELECT MGR FROM EMP
+                              WHERE ENAME = ‘ADAMS’);
+* 

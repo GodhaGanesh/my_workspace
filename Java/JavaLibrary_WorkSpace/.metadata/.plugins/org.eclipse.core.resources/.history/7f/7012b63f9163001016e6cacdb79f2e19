@@ -1,0 +1,29 @@
+package bean_programming;
+
+import java.util.ArrayList;
+
+public class StudentMainClass {
+	public static void main(String[] args) {
+		Student s1 = new Student("Chintu", 21, 56, 'M', 'A');
+		Student s2 = new Student("Bunty", 24, 78, 'M', 'B');
+		Student s3 = new Student("Chutki", 6, 94, 'F','A');
+		Student s4 = new Student("Suzuka", 14, 89, 'F', 'B');
+		ArrayList stu = new ArrayList();
+		stu.add(s1);
+		stu.add(s2);
+		stu.add(s3);
+		stu.add(s4);
+		for (int i = 0; i < stu.size(); i++) {
+			Student s = (Student)stu.get(i);
+			if(s.getSection()=='A') System.out.println(s.getMarks());
+		}
+		for(int i = 0; i< stu.size(); i++) {
+			Student s = (Student)stu.get(i);
+			if(s.getMarks()>65) System.out.println(s);
+		}
+		for (int i = 0; i<stu.size();i++) {
+			Student s = (Student)stu.get(i);
+			if(s.getRoll()==8) System.out.println(s.getGender());
+		}
+	}
+}

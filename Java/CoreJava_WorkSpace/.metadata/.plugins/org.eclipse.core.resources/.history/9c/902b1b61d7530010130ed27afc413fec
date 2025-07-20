@@ -1,0 +1,10 @@
+package oops_programming_style7;
+
+public class AuthorValidation {
+
+	public static boolean verifyName(String name) {
+		for (int i = 0; i < Author.authors.length; i++) {
+			
+		}
+	}
+}

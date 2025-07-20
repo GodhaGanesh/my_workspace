@@ -1,0 +1,462 @@
+SELECT * FROM EMP;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO               
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------               
+      7369 SMITH      CLERK           7902 17-DEC-80       2000                    20               
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30               
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30               
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20               
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30               
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30               
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10               
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20               
+      7839 KING       PRESIDENT            17-NOV-81      10000                    10               
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30               
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20               
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30               
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20               
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10               
+
+14 rows selected.
+
+SQL> SELECT ENAME
+  2  FROM EMP
+  3  WHERE INSTR(ENAME,'A',1,2)>0;
+
+ENAME                                                                                               
+----------                                                                                          
+ADAMS                                                                                               
+
+SQL> SELECT *
+  2  FROM EMP
+  3  WHERE (INSTR(ENAME,'A',1,1) > 0) AND (INSTR(ENAME,'A',1,2) > 0);
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO               
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------               
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20               
+
+SQL> UPDATE EMP
+  2  ;
+
+*
+ERROR at line 2:
+ORA-00971: missing SET keyword 
+
+
+SQL> CREATE TABLE NAMES
+  2  (
+  3  NAMES VARCHAR2(10) NOTNULL
+  4  );
+NAMES VARCHAR2(10) NOTNULL
+                   *
+ERROR at line 3:
+ORA-00907: missing right parenthesis 
+
+
+SQL> /
+NAMES VARCHAR2(10) NOTNULL
+                   *
+ERROR at line 3:
+ORA-00907: missing right parenthesis 
+
+
+SQL> //\\
+NAMES VARCHAR2(10) NOTNULL
+                   *
+ERROR at line 3:
+ORA-00907: missing right parenthesis 
+
+
+SQL> CREATE TABLE NAMES
+  2  (
+  3  NAME VARCHAR(10) NOT NULL
+  4  );
+
+Table created.
+
+SQL> INSERT INTO NAMES VALUES(&NAME);
+Enter value for name: ADAMS
+old   1: INSERT INTO NAMES VALUES(&NAME)
+new   1: INSERT INTO NAMES VALUES(ADAMS)
+INSERT INTO NAMES VALUES(ADAMS)
+                         *
+ERROR at line 1:
+ORA-00984: column not allowed here 
+
+
+SQL> /
+Enter value for name: 'ADAMS'
+old   1: INSERT INTO NAMES VALUES(&NAME)
+new   1: INSERT INTO NAMES VALUES('ADAMS')
+
+1 row created.
+
+SQL> /
+Enter value for name: 'GANESH'
+old   1: INSERT INTO NAMES VALUES(&NAME)
+new   1: INSERT INTO NAMES VALUES('GANESH')
+
+1 row created.
+
+SQL> /
+Enter value for name: 'Bavaa'
+old   1: INSERT INTO NAMES VALUES(&NAME)
+new   1: INSERT INTO NAMES VALUES('Bavaa')
+
+1 row created.
+
+SQL> UPDATE NAMES
+  2  SET = 'BAVAA'
+  3  WHERE NAME = 'Bavaa';
+SET = 'BAVAA'
+    *
+ERROR at line 2:
+ORA-01747: invalid user.table.column, table.column, or column specification 
+
+
+SQL> UPDATE NAMES
+  2  SET NAME = 'BAVAA'
+  3  WHERE NAME = 'Bavaa';
+
+1 row updated.
+
+SQL> SELECT * FROM NAMES;
+
+NAME                                                                                                
+----------                                                                                          
+ADAMS                                                                                               
+GANESH                                                                                              
+BAVAA                                                                                               
+
+SQL> SELECT *
+  2  FROM NAMES
+  3  WHERE INSTR(NAME,'A',1,2) >0;
+
+NAME                                                                                                
+----------                                                                                          
+ADAMS                                                                                               
+BAVAA                                                                                               
+
+SQL> SELECT NAME
+  2  FROM NAMES
+  3  WHERE ;
+WHERE 
+     *
+ERROR at line 3:
+ORA-00936: missing expression 
+
+
+SQL>  SELECT NAME
+  2   FROM NAMES
+  3   WHERE (INSTR(NAME,'A',1,2) >0) AND (INSTR(NAME,'A',1,3)=0);
+
+NAME                                                                                                
+----------                                                                                          
+ADAMS                                                                                               
+
+SQL>  SELECT *
+  2   FROM EMP
+  3   WHERE (INSTR(NAME,'A',1,2) >0) AND (INSTR(NAME,'A',1,3)=0);
+ WHERE (INSTR(NAME,'A',1,2) >0) AND (INSTR(NAME,'A',1,3)=0)
+                                           *
+ERROR at line 3:
+ORA-00904: "NAME": invalid identifier 
+
+
+SQL>  SELECT *
+  2   FROM EMP
+  3   WHERE (INSTR(ENAME,'A',1,2) >0) AND (INSTR(ENAME,'A',1,3)=0);
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO               
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------               
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20               
+
+SQL>  SELECT *
+  2   FROM EMP
+  3   WHERE INSTR(ENAME,'LL',1,1);
+ WHERE INSTR(ENAME,'LL',1,1)
+                           *
+ERROR at line 3:
+ORA-00920: invalid relational operator 
+
+
+SQL>  SELECT ENAME
+  2   FROM EMP
+  3   WHERE INSTR(ENAME,'LL',1,1) > 0;
+
+ENAME                                                                                               
+----------                                                                                          
+ALLEN                                                                                               
+MILLER                                                                                              
+
+SQL> CREATE TABLE INFO
+  2  (FIRSTNAME VARCHAR(10) NOT NULL
+  3  MIDDLENAME VARCHAR(10) NOT NULL;
+MIDDLENAME VARCHAR(10) NOT NULL
+*
+ERROR at line 3:
+ORA-00907: missing right parenthesis 
+
+
+SQL> CREATE TABLE INFO
+  2  (
+  3  FISRTNAME VARCHAR(10) NOT NULL,
+  4  MIDDLENAME VARCHAR(10) NOTNULL,
+  5  LASTNAME VARCHAR(10) NOT NULL,
+  6  GMAIL VARCHAR(50) NOT NULL
+  7  );
+MIDDLENAME VARCHAR(10) NOTNULL,
+                       *
+ERROR at line 4:
+ORA-00907: missing right parenthesis 
+
+
+SQL> CREATE TABLE INFO
+  2  (
+  3  FISRTNAME VARCHAR(10) NOT NULL,
+  4  MIDDLENAME VARCHAR(10) NOT NULL,
+  5  LASTNAME VARCHAR(10) NOT NULL,
+  6  GMAIL VARCHAR(50) NOT NULL
+  7  );
+
+Table created.
+
+SQL> CREATE TABLE INFO
+  2  (
+  3  FISRTNAME VARCHAR(10) NOT NULL,
+  4  MIDDLENAME VARCHAR(10) NOT NULL,
+  5  LASTNAME VARCHAR(10) NOT NULL,
+  6  GMAIL VARCHAR(50) NOT NULL
+  7  );
+CREATE TABLE INFO
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+SQL> 
+SQL> 
+SQL> INSERT INTO INFO VALUES('CH','PAVAN','KUMAR','CHPAVANKUMAR@GMAIL.COM');
+
+1 row created.
+
+SQL> INSERT INTO INFO VALUES('DON','SEENU','BHAI','DONSEENUBHAI@GMAIL.COM');
+
+1 row created.
+
+SQL> INSERT INTO INFO VALUES('GUDLA','SAI','KUMAR','GUDLASAIKUMAR@GMAIL.COM');
+
+1 row created.
+
+SQL> INSERT INTO INFO VALUES('NADIMINTI','SURYA','TEJA',NADIMINTISURYATEJA@GMAIL.COM);
+INSERT INTO INFO VALUES('NADIMINTI','SURYA','TEJA',NADIMINTISURYATEJA@GMAIL.COM)
+*
+ERROR at line 1:
+ORA-04054: database link GMAIL.COM does not exist 
+
+
+SQL> SELECT * FROM INFO
+  2  ;
+
+FISRTNAME  MIDDLENAME LASTNAME   GMAIL                                                              
+---------- ---------- ---------- --------------------------------------------------                 
+CH         PAVAN      KUMAR      CHPAVANKUMAR@GMAIL.COM                                             
+DON        SEENU      BHAI       DONSEENUBHAI@GMAIL.COM                                             
+GUDLA      SAI        KUMAR      GUDLASAIKUMAR@GMAIL.COM                                            
+
+SQL> INSERT INTO INFO VALUES('NADIMINTI','SURYA','TEJA',NADIMINTISURYATEJA@GMAIL.COM');
+ERROR:
+ORA-01756: quoted string not properly terminated 
+
+
+SQL> INSERT INTO INFO VALUES('NADIMINTI','SURYA','TEJA','NADIMINTISURYATEJA@GMAIL.COM');
+
+1 row created.
+
+SQL> SELECT * FROM INFO;
+
+FISRTNAME  MIDDLENAME LASTNAME   GMAIL                                                              
+---------- ---------- ---------- --------------------------------------------------                 
+CH         PAVAN      KUMAR      CHPAVANKUMAR@GMAIL.COM                                             
+DON        SEENU      BHAI       DONSEENUBHAI@GMAIL.COM                                             
+GUDLA      SAI        KUMAR      GUDLASAIKUMAR@GMAIL.COM                                            
+NADIMINTI  SURYA      TEJA       NADIMINTISURYATEJA@GMAIL.COM                                       
+
+SQL> ALTER TABLE INFO
+  2  ADD(FULLNAME VARCHAR(30) NOTNULL);
+ADD(FULLNAME VARCHAR(30) NOTNULL)
+                         *
+ERROR at line 2:
+ORA-00907: missing right parenthesis 
+
+
+SQL> ALTER TABLE INFO
+  2  ADD(FULLNAME VARCHAR(30) NOT NULL);
+ALTER TABLE INFO
+            *
+ERROR at line 1:
+ORA-01758: table must be empty to add mandatory (NOT NULL) column 
+
+
+SQL> ALTER TABLE INFO
+  2  ADD(FULLNAME VARCHAR(30) );
+
+Table altered.
+
+SQL> UPDATE INFO
+  2  SET FULLNAME='CHPAVANKUMAR'
+  3  WHERE FIRSTNAME='CH';
+WHERE FIRSTNAME='CH'
+      *
+ERROR at line 3:
+ORA-00904: "FIRSTNAME": invalid identifier 
+
+
+SQL> UPDATE INFO
+  2  SET FULLNAME='CHPAVANKUMAR'
+  3  WHERE FISRTNAME='CH';
+
+1 row updated.
+
+SQL> UPDATE INFO
+  2  SET FULLNAME='DONSEENUBHAI'
+  3  WHERE FISRTNAME='DON';
+
+1 row updated.
+
+SQL> UPDATE INFO
+  2  SET FULLNAME='GUDLASAIKUMAR'
+  3  WHERE FISRTNAME='GUDLA';
+
+1 row updated.
+
+SQL> UPDATE INFO
+  2  SET FULLNAME='NADIMINTISURYATEJA'
+  3  WHERE LASTNAME='TEJA';
+
+1 row updated.
+
+SQL> SELECT * FROM INFO;
+
+FISRTNAME  MIDDLENAME LASTNAME   GMAIL                                                              
+---------- ---------- ---------- --------------------------------------------------                 
+FULLNAME                                                                                            
+------------------------------                                                                      
+CH         PAVAN      KUMAR      CHPAVANKUMAR@GMAIL.COM                                             
+CHPAVANKUMAR                                                                                        
+                                                                                                    
+DON        SEENU      BHAI       DONSEENUBHAI@GMAIL.COM                                             
+DONSEENUBHAI                                                                                        
+                                                                                                    
+GUDLA      SAI        KUMAR      GUDLASAIKUMAR@GMAIL.COM                                            
+GUDLASAIKUMAR                                                                                       
+                                                                                                    
+NADIMINTI  SURYA      TEJA       NADIMINTISURYATEJA@GMAIL.COM                                       
+NADIMINTISURYATEJA                                                                                  
+                                                                                                    
+
+SQL> ALTER TABLE INFO
+  2  MODIFY GMAIL VARCHAR(35);
+
+Table altered.
+
+SQL> SELECT * FROM INFO;
+
+FISRTNAME  MIDDLENAME LASTNAME   GMAIL                               FULLNAME                       
+---------- ---------- ---------- ----------------------------------- ------------------------------ 
+CH         PAVAN      KUMAR      CHPAVANKUMAR@GMAIL.COM              CHPAVANKUMAR                   
+DON        SEENU      BHAI       DONSEENUBHAI@GMAIL.COM              DONSEENUBHAI                   
+GUDLA      SAI        KUMAR      GUDLASAIKUMAR@GMAIL.COM             GUDLASAIKUMAR                  
+NADIMINTI  SURYA      TEJA       NADIMINTISURYATEJA@GMAIL.COM        NADIMINTISURYATEJA             
+
+SQL> UPDATE INFO
+  2  SET FULLNAME='CH PAVAN KUMAR'
+  3  WHERE FISRTNAME='CH';
+
+1 row updated.
+
+SQL> 
+SQL> 
+SQL> UPDATE INFO
+  2  SET FULLNAME='DON SEENU BHAI'
+  3  WHERE FISRTNAME='DON';
+
+1 row updated.
+
+SQL> 
+SQL> 
+SQL> UPDATE INFO
+  2  SET FULLNAME='GUDLA SAI KUMAR'
+  3  WHERE FISRTNAME='GUDLA';
+
+1 row updated.
+
+SQL> 
+SQL> 
+SQL> UPDATE INFO
+  2  SET FULLNAME='NADIMINTI SURYA TEJA'
+  3  WHERE LASTNAME='TEJA';
+
+1 row updated.
+
+SQL> SELECT * FROM INFO;
+
+FISRTNAME  MIDDLENAME LASTNAME   GMAIL                               FULLNAME                       
+---------- ---------- ---------- ----------------------------------- ------------------------------ 
+CH         PAVAN      KUMAR      CHPAVANKUMAR@GMAIL.COM              CH PAVAN KUMAR                 
+DON        SEENU      BHAI       DONSEENUBHAI@GMAIL.COM              DON SEENU BHAI                 
+GUDLA      SAI        KUMAR      GUDLASAIKUMAR@GMAIL.COM             GUDLA SAI KUMAR                
+NADIMINTI  SURYA      TEJA       NADIMINTISURYATEJA@GMAIL.COM        NADIMINTI SURYA TEJA           
+
+SQL> SELECT SUBSTR(FULLNAME,(INSTR(FULLNAME,' ',1,1)+1),(INSTR(FULLNAME,' ',1,2)-1))
+  2  FROM INFO;
+
+SUBSTR(FULLNAME,(INSTR(FULLNAM                                                                      
+------------------------------                                                                      
+PAVAN KU                                                                                            
+SEENU BHA                                                                                           
+SAI KUMAR                                                                                           
+SURYA TEJA                                                                                          
+
+SQL> SELECT SUBSTR(FULLNAME,(INSTR(FULLNAME,' ',1,1)+1),(INSTR(FULLNAME,' ',1,2)-(INSTR(FULLNAME,' ',1,1)))
+  2  FROM INFO;
+FROM INFO
+*
+ERROR at line 2:
+ORA-00907: missing right parenthesis 
+
+
+SQL> SELECT SUBSTR(FULLNAME,(INSTR(FULLNAME,' ',1,1)+1),(INSTR(FULLNAME,' ',1,2)-(INSTR(FULLNAME,' ',1,1))))
+  2  FROM INFO;
+
+SUBSTR(FULLNAME,(INSTR(FULLNAM                                                                      
+------------------------------                                                                      
+PAVAN                                                                                               
+SEENU                                                                                               
+SAI                                                                                                 
+SURYA                                                                                               
+
+SQL> 
+SQL> SELECT SUBSTR(FULLNAME,(INSTR(FULLNAME,' ',1,1)+1),(INSTR(FULLNAME,' ',1,2)-(INSTR(FULLNAME,' ',1,1)))) AS "MIDDLE NAME"
+  2  FROM INFO;
+
+MIDDLE NAME                                                                                         
+------------------------------                                                                      
+PAVAN                                                                                               
+SEENU                                                                                               
+SAI                                                                                                 
+SURYA                                                                                               
+
+SQL> SELECT SUBSTR(GMAIL,-10)
+  2  FROM INFO;
+
+SUBSTR(GMA                                                                                          
+----------                                                                                          
+@GMAIL.COM                                                                                          
+@GMAIL.COM                                                                                          
+@GMAIL.COM                                                                                          
+@GMAIL.COM                                                                                          
+
+SQL> 
+SQL> 
+SQL> SPOOL OFF

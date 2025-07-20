@@ -1,0 +1,53 @@
+package oops_programming_style3;
+
+public class Bus {
+	public static int maxSeats = 56;
+	public static double collection = 0;
+	public int bookedSeats = 0;
+	public int availableSeats = 56;
+	public String operatorName;
+	public String regNo;
+	public String boardingPoint;
+	public String destinationPoint;
+	public double ticketPrice;
+	
+	public void newBus(String operatorName, String regNo, String bordingPoint, String destinationPoint, double ticketPrice) {
+		this.operatorName = operatorName;
+		this.regNo = regNo;
+		this.boardingPoint = bordingPoint;
+		this.destinationPoint = destinationPoint;
+		this.ticketPrice = ticketPrice;
+	}
+	  
+	public void bookTicket(int count) {
+		if(availableSeats == 0) {
+			System.out.println("!!! Tickets Completed !!!");
+			return;
+		}
+		if(count>availableSeats) {
+			System.out.println("Only "+availableSeats+" are Available !!");
+			return;
+		}
+		for(int i = 1; i<=count; i++) {
+			bookedSeats++;
+			availableSeats--;
+			collection += this.ticketPrice;
+		}
+		System.out.println("Happy Journey "+count+" Tickets Booked");
+		System.out.println("From "+boardingPoint+" - To "+destinationPoint);
+	}
+	
+	public void display() {
+		System.out.println();
+		System.out.println("------ "+boardingPoint+" to "+destinationPoint+" ------");
+		System.out.println(" Bus Number : "+regNo);
+		System.out.println(" Operator : "+operatorName);
+		System.out.println(" Bus Capacity : "+maxSeats);
+		System.out.println(" Seats Available : "+availableSeats);
+		System.out.println(" Seats Booked : "+bookedSeats);
+		System.out.println(" Ticket Fare : "+ticketPrice);
+		System.out.println("-------------------------------------------");
+		System.out.println();
+		System.out.println();
+	}
+}

@@ -1,0 +1,150 @@
+waqt count no of characters present in 'smith':
+
+ select length('SMITH') as length
+ from dual;
+
+waqt extract first 3 characters of the emp names.
+
+select substr(ename,1,3)
+from emp;
+
+waqt extract last 3 characters of the employees names.
+
+ select substr(ename,-3.3)
+ from emp;
+
+waqtd first half of emp names.
+
+select substr(ename,1,length(ename)/2)
+from emp;
+
+waqtd second half of emp names.
+
+select substr(ename,length(ename)/2+1)
+from emp;
+
+waqtd no of times char 'A' is present in BANANA.
+
+ SELECT (LENGTH('BANANA'))-LENGTH(REPLACE('BANANA','A'))
+ FROM DUAL;
+
+WAQTD the count of no times 'A' is present in 'MALAYALAM'.
+
+ SELECT LENGTH('MALAYALAM')-LENGTH(REPLACE('MALAYALAM','A'))
+ FROM DUAL;
+
+WAQTD names of emp if they have char 'A' present in their names.
+
+ select ename
+ from emp
+ where length(ename)-length(replace(ename,'A'))=1;
+
+WAQTD names of employees if they have char 'A' present atleast twice in their names.
+
+select ename
+from emp
+where length(ename)-length(replace(ename,'A'))>=2;
+
+WAQTD names of employees if they have char 'A' present atleast thrice in their names.
+
+select ename
+from emp
+where length(ename)-length(replace(ename,'A'))=3;
+
+WAQTD names of employees if they have char 'A' present exactly twice in their names.
+
+ select ename
+ from emp
+ where length(ename)-length(replace(ename,'A'))=2;
+
+WAQTD enames of the employees who earn salary in multiples of 3.
+
+ select ename
+ from emp
+ where mod(sal,3)=0
+
+WAQTD details of emp who have odd eid.
+
+select emp.*
+from emp
+where mod(EMPNO,2)=1;
+
+WAQTD detalis of the employees who was heired on a sunday.
+
+select emp.*
+from emp
+where to_char(hiredate,'dy')='sun';
+
+WAQTD details of an employee hired on monday at 10am.
+
+ select emp.*
+ from emp
+ where to_char(hiredate,'dy')='mon' and to_char(hiredate,'hh24')='10';
+
+List emp whose name having 4 characters.
+
+select emp.*
+from emp
+where length(ename)=4;
+
+List of emp whose job is having 7 characters.
+
+ select emp.*
+ from emp
+ where length(job)=7
+
+Find out how many times letter 'S' occurs in 'qspiders'
+
+ select length('QSPIDERS')-LENGTH(REPLACE('QSPIDERS','S'))
+ FROM DUAL
+
+List the employees whose job is having last 3 characters as 'man'.
+
+ select emp.*
+ from emp
+ where substr(JOB,-3,3)='MAN'
+
+List of emp whose job is having first 3 characters as 'man'
+
+select emp.*
+from emp
+where substr(job,1,3)='MAN';
+
+Display all the emp names whose name is having exactly 1 'L'
+
+ select emp.*
+ from emp
+ where length(ename)-length(replace(ename,'L'))=1;
+
+select emp.*
+from emp
+where instr(ename,'L',1,1)>0 and instr(ename,'L',1,2)=0;
+
+
+Display dept names which are having letter 'O'.
+
+select dname
+from dept
+where instr(dname,'O',1,1)>0;
+
+Calculate number of L in string 'HELLLLL'
+
+ SELECT LENGTH('HELLLLL')-LENGTH(REPLACE('HELLLLL','L'))
+ FROM DUAL
+
+Display first 3 char of ename in lower case and rest everything.
+
+ select concat(lower(substr(ename,1,3)),upper(substr(ename,4))) as ename
+ from emp
+
+List the employees hired on a wednessday.
+
+ select hiredate
+ from emp
+ where to_char(hiredate,'dy')='wed';
+
+List the emp hired on a sunday in th month of may.
+
+ select emp.*
+ from emp
+ where to_char(hiredate,'mon:dy')='may:sun';

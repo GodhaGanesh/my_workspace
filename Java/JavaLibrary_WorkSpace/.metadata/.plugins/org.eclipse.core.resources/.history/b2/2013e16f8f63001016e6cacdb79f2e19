@@ -1,0 +1,66 @@
+package bean_programming;
+
+import java.io.Serializable;
+
+public class Student implements Serializable {
+	private String name;
+	private int roll;
+	private int marks;
+	private char gender;
+	private char section;
+	
+	public Student() {}
+
+	public Student(String name, int roll, int marks, char gender, char section) {
+		this.name = name;
+		this.roll = roll;
+		this.marks = marks;
+		this.gender = gender;
+		this.section = section;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getMarks() {
+		return marks;
+	}
+
+	public void setMarks(int marks) {
+		this.marks = marks;
+	}
+
+	public char getSection() {
+		return section;
+	}
+
+	public void setSection(char section) {
+		this.section = section;
+	}
+
+	public String getRoll() {
+		return roll;
+	}
+
+	public char getGender() {
+		return gender;
+	}
+	@Override
+	public String toString() {
+		return "Student [name=" + name + "\n\t, roll=" + roll + ",\n\t marks=" + marks + ",\n\t gender=" + gender + ",\n\t section="
+				+ section + "]";
+	}
+	public void display() {
+		System.out.println("Name : "+getName());
+		System.out.println("Section : "+getSection());
+		System.out.println("RollNo : "+getRoll());
+		System.out.println("Gender : "+getGender());
+		System.out.println("Marks : "+getMarks());
+	}
+	
+}

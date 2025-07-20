@@ -1,0 +1,21 @@
+package oops_programming_style7;
+
+public class Outline {
+	private double thickness;
+	private String color;
+	private String style;
+	
+	public Outline() {
+		
+	}
+	
+	public Outline(double thickness, String color, String style) {
+		this.thickness = thickness;
+		this.color = color;
+		this.style = style;
+	}
+	
+	public Outline(double thickness, String color) {
+		
+	}
+}

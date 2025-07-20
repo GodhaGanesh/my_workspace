@@ -1,0 +1,34 @@
+package oops_programming_style3;
+
+public class Train {
+	private static String boardingPoint = "KACHEGUDA";
+    private String destinationPoint;
+    private String trainName;
+    private double speed;
+    private double distance;
+    private String trainNumber;
+
+    public void destination(String destinationPoint,double distance) {
+    	this.destinationPoint = destinationPoint;
+    	trainNumber = boardingPoint.substring(0, 3)+ (int)destinationPoint.charAt(0)/10+(int)destinationPoint.charAt(1)/10+(int)destinationPoint.charAt(2)/10;
+    	trainName = destinationPoint+" EXPRESS";
+    	this.distance = distance;
+    }
+    public void speed(int s) {
+    	speed = s;
+    }
+    public double travelTime() {
+    	return distance/speed;
+    }
+    public void display() {
+    	System.out.println("-------------------------------------");
+    	System.out.println("            "+trainName);
+    	System.out.println("-------------------------------------");
+    	System.out.println(" Train No. : "+trainNumber);
+    	System.out.println(" From : "+boardingPoint);
+    	System.out.println(" To   : "+destinationPoint);
+    	System.out.println(" distance : "+distance);
+    	System.out.println(" speed : "+speed);
+    	System.out.println(" Time : "+travelTime()+" Hrs (or) "+travelTime()*60+" Mins");
+    }
+}

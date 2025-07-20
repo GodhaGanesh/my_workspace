@@ -1,0 +1,39 @@
+package oops_programming_style7;
+
+abstract public class Shape {
+	protected String color;
+	protected double outlineThickness;
+	protected double area;
+	
+	public Shape(String color,double outlineThickness) {
+		if (GenericValidation.checkColor(color)) {
+			this.color = color;
+		}
+		else {
+			System.err.println(" Invalid Color !!");
+		}
+		if (GenericValidation.checkThickness(outlineThickness)) {
+			this.outlineThickness = outlineThickness;
+		}
+		else {
+			System.err.println(" Invalid Thickness !!");
+		}
+	}
+	
+	protected void errDisplay() {
+		System.err.println("this "+this.getClass().toString().substring(30)+" have invalid values in it !!");
+		System.err.println(" Cant display it !!");
+	}
+	
+	protected void veiw() {
+		System.out.println("-------------------------");
+		System.out.println("     "+this.getClass().toString().substring(30)+" Details ");
+		System.out.println("-------------------------");
+		System.out.println("  Color : "+color);
+		System.out.println("  Thickness : "+outlineThickness);
+	}
+	
+	abstract public void display();
+	
+	abstract public double area();
+}

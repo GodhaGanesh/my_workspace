@@ -1,0 +1,50 @@
+package oops_programming_style7;
+
+public class Outline {
+	private double thickness;
+	private String color;
+	private String style;
+	
+	public Outline() {
+		
+	}
+	
+	public Outline(double thickness, String color, String style) {
+		if(OutlineValidation.verifyThickness(thickness)&&OutlineValidation.verifyColor(color)&&OutlineValidation.verifyStyle(style)) {
+			this.thickness = thickness;
+			this.color = color;
+			this.style = style;			
+		}
+		else{
+			if(!OutlineValidation.verifyColor(color))
+				System.err.println("invalid outline color....!");
+			if(!OutlineValidation.verifyThickness(thickness))
+				System.err.println("invalid outline thickness..!");
+			if(!OutlineValidation.verifyStyle(style))
+				System.err.println("invalid outline style");
+		}
+	}
+	
+	public Outline(double thickness, String color) {
+		if(OutlineValidation.verifyThickness(thickness)&&OutlineValidation.verifyColor(color)) {
+			this.thickness = thickness;
+			this.color = color;
+		}
+		else {
+			if(!OutlineValidation.verifyColor(color))
+				System.err.println("invalid outline color....!");
+			if(!OutlineValidation.verifyThickness(thickness))
+				System.err.println("invalid outline thickness..!");
+		}
+	}
+	
+	protected void outlineDetails() {
+		if(thickness==0&&color==null&&style==null)
+			System.out.println("  No Outline...!");
+		else {
+			System.out.println("  Outline thickness is :- "+thickness+" mm");
+			System.out.println("  Outline Color is :- "+color);
+			System.out.println("  Outline style is :- "+style);
+		}
+	}
+}

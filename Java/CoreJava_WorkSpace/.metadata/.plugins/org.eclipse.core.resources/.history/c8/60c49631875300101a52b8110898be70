@@ -1,0 +1,29 @@
+package oops_programming_style7;
+
+public class Outline {
+	private double thickness;
+	private String color;
+	private String style;
+	
+	public Outline() {
+		
+	}
+	
+	public Outline(double thickness, String color, String style) {
+		if(OutlineValidation.verifyThickness(thickness)&&OutlineValidation.verifyColor(color)&&OutlineValidation.verifyStyle(style)) {
+			this.thickness = thickness;
+			this.color = color;
+			this.style = style;			
+		}
+		else{
+			if(!OutlineValidation.verifyColor(color))
+				System.err.println("invalid color....!");
+			
+		}
+	}
+	
+	public Outline(double thickness, String color) {
+		this.thickness = thickness;
+		this.color = color;
+	}
+}

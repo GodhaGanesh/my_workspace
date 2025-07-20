@@ -1,0 +1,16 @@
+package throws_programming;
+
+public class Demo {
+	public static void start() {
+		System.out.println(10/0);
+	}
+	public static void run() {
+		start();
+	}
+	public static void stop() {
+		run();
+	}
+	public static void main(String[] args) {
+		stop();
+	}
+}

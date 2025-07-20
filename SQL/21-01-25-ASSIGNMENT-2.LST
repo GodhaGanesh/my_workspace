@@ -1,0 +1,111 @@
+
+SQL> SELECT ENAME
+  2  FROM EMP
+  3  WHERE (SUBSTR(ENAME,1,1) NOT IN ('A','E','I','O','U')) AND (SUBSTR(ENAME,-1,1) IN ('A','E','I','O','U'));
+
+ENAME                                                                           
+----------                                                                      
+BLAKE                                                                           
+
+SQL> SELECT SUBSTR(ENAME,1,LENGTH(ENAME)/2) AS FIRSTHALF
+  2  FROM EMP;
+
+FIRSTHALF                                                                       
+----------                                                                      
+SM                                                                              
+AL                                                                              
+WA                                                                              
+JO                                                                              
+MAR                                                                             
+BL                                                                              
+CL                                                                              
+SC                                                                              
+KI                                                                              
+TUR                                                                             
+AD                                                                              
+
+FIRSTHALF                                                                       
+----------                                                                      
+JA                                                                              
+FO                                                                              
+MIL                                                                             
+
+14 rows selected.
+
+SQL> SELECT SUBSTR(ENAME,1,LENGTH(ENAME)/2) AS FIRSTHALF
+  2  FROM EMP;
+
+FIRSTHALF                                                                       
+----------                                                                      
+SM                                                                              
+AL                                                                              
+WA                                                                              
+JO                                                                              
+MAR                                                                             
+BL                                                                              
+CL                                                                              
+SC                                                                              
+KI                                                                              
+TUR                                                                             
+AD                                                                              
+
+FIRSTHALF                                                                       
+----------                                                                      
+JA                                                                              
+FO                                                                              
+MIL                                                                             
+
+14 rows selected.
+
+SQL> SELECT SUBSTR(ENAME,-1,LENGTH(ENAME)/2) AS SECONDHALF
+  2  FROM EMP;
+
+S                                                                               
+-                                                                               
+H                                                                               
+N                                                                               
+D                                                                               
+S                                                                               
+N                                                                               
+E                                                                               
+K                                                                               
+T                                                                               
+G                                                                               
+R                                                                               
+S                                                                               
+
+S                                                                               
+-                                                                               
+S                                                                               
+D                                                                               
+R                                                                               
+
+14 rows selected.
+
+SQL> 
+SQL> SELECT SUBSTR(ENAME,-LENGTH(ENAME)*0.5,LENGTH(ENAME)*0.5) AS SECONDHALF
+  2  FROM EMP;
+
+SECONDHALF                                                                      
+----------                                                                      
+TH                                                                              
+EN                                                                              
+RD                                                                              
+ES                                                                              
+TIN                                                                             
+KE                                                                              
+RK                                                                              
+TT                                                                              
+NG                                                                              
+NER                                                                             
+MS                                                                              
+
+SECONDHALF                                                                      
+----------                                                                      
+ES                                                                              
+RD                                                                              
+LER                                                                             
+
+14 rows selected.
+
+SQL> SPOOL OFF

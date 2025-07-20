@@ -1,0 +1,35 @@
+package oops_programming_style2;
+
+public class Book {
+	public static int discount;
+	public static String authorName = "cherry Bhai";
+	public String title;
+	public int pagesCount;
+	public double price;
+	public double sellingPrice;
+	
+	public void newBook(String bookName, int countOfPages, double cost) {
+		title = bookName;
+		pagesCount = countOfPages;
+		price = cost;
+		sellingPrice = cost;
+	}
+	public void addDiscount() {
+		discount+=20;
+		sellingPrice = (80*price)/100;
+	}
+	public void display() {
+		System.out.println("-------- "+title+" -------");
+		System.out.println();
+		System.out.println(" Written By "+authorName);
+		System.out.println(" in "+pagesCount+" pages");
+		System.out.println(" price : "+price);
+		System.out.println(" discount : "+discount+"%");
+		System.out.println(" Selling Price : "+sellingPrice);
+		System.out.println();
+		System.out.println("----- Saved Amount : "+(price-sellingPrice)+"-----");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+}

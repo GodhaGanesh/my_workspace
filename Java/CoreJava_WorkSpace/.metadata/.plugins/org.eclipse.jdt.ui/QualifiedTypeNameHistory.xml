@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.jar.Manifest"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.launcher.Main"/>
+    <fullyQualifiedTypeName name="oops_programming_inheritance.TriangleValidation"/>
+    <fullyQualifiedTypeName name="oops_programming_style5.Shape"/>
+    <fullyQualifiedTypeName name="oops_programming_style5.Pentagon"/>
+    <fullyQualifiedTypeName name="oops_programming_style5.TriangleValidation"/>
+    <fullyQualifiedTypeName name="oops_programming_style6.HexagonValidation"/>
+    <fullyQualifiedTypeName name="oops_programming_style6.PentagonValidation"/>
+    <fullyQualifiedTypeName name="oops_programming_style6.Hexagon"/>
+    <fullyQualifiedTypeName name="oops_programming_style6.Pentagon"/>
+    <fullyQualifiedTypeName name="oops_programming_style7.Outline"/>
+    <fullyQualifiedTypeName name="oops_programming_style7.OutlineValidation"/>
+    <fullyQualifiedTypeName name="oops_programming_style7.AuthorValidation"/>
+</qualifiedTypeNameHistroy>
