@@ -24,18 +24,20 @@ button {
   margin: 5px 5px 5px 0;
 }
 #treeContainer {
-  overflow-x: auto;
+  /* overflow-x: auto; */
   margin-top: 10px;
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 6px;
   max-width: 100%;
+  height: auto;
   position: relative;
 }
 .tree-node {
   margin-left: 20px;
+  margin: 10px;
   padding: 5px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 4px;
   transition: all 0.3s;
   overflow: hidden;
@@ -87,9 +89,12 @@ button {
 }
 .copy-btn {
   margin-left: 10px;
-  font-size: 10px;
-  padding: 2px 5px;
+  font-size: 15px;
+  padding: 5px;
   cursor: pointer;
+  border-radius: 100px;
+  border: none;
+  background-color: #e9c46a;
 }
 .highlight {
   outline: 2px solid red;

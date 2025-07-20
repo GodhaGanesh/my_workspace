@@ -1,0 +1,32 @@
+to build single page application
+
+before angular and react developers use Ajax + jQery which was creating singlr page application
+# in this it follows xhr request moudule.
+# AJAX stands for Asynchronus javaScript + xml
+# JQuery is one of the most popular JS library where 
+# xhr stands for xml http request.
+
+#this approach has many disadvantages. so in 2009, a google developer introduce a framework angular which is used to created SPA.
+
+# later in 2013, a new era started, a facebook developer invented react library which took the place of angular.
+# when the application is very huge developers prefers angular.
+# whenever it is small application developers prefers React.
+
+  REACT :-
+****************
+# React is one of the most popular and demanding library in the market because of it's features.
+# React is a small UI library which is use to build single page application.
+
+  difference between frameworks and library :-
+--------------------------------------------------
+
+
+features of the React :-
+--------------------------------
+# component based approach.
+# JSX.
+# Virtual DOM.
+# one way data binding.
+# performance.
+# simplicity.
+

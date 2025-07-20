@@ -93,7 +93,7 @@ function generateTree() {
     }
 
     const copyBtn = document.createElement("button");
-    copyBtn.textContent = "Copy";
+    copyBtn.innerHTML = `<i class="bi bi-clipboard"></i>`;
     copyBtn.classList.add("copy-btn");
     copyBtn.addEventListener("click", function (e) {
       e.stopPropagation();
@@ -140,6 +140,9 @@ function generateTree() {
   if (htmlEl) treeContainer.appendChild(htmlEl);
 
   highlightNodes();
+
+  expandAll();
+  expandAll();
 }
 
 function copyNodeHtml(node) {
@@ -302,7 +305,7 @@ document.addEventListener("keydown", function (e) {
 function downloadImage() {
   html2canvas(document.querySelector("#treeContainer")).then((canvas) => {
     const link = document.createElement("a");
-    link.download = "dom-tree.png";
+    link.download = "dom-tree-by-master-vision.png";
     link.href = canvas.toDataURL();
     link.click();
   });
@@ -317,6 +320,6 @@ function downloadPDF() {
       format: [canvas.width, canvas.height],
     });
     pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
-    pdf.save("dom-tree.pdf");
+    pdf.save("dom-tree-by-master-vision.pdf");
   });
 }
