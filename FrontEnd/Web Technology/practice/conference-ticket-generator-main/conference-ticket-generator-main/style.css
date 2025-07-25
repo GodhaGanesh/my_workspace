@@ -1,0 +1,39 @@
+body{
+    /* background: url('./assets/images/background-desktop.png'); */
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+#logohead{
+    color: white;
+    text-align: center;
+}
+@font-face {
+    font-family: 'InconsolataExtraBold';
+    src: url('./assets/fonts/static/Inconsolata-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('./assets/fonts/static/Inconsolata-Regular.ttf');
+}
+#logohead h1{
+    font-family: 'InconsolataExtraBold', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+#logohead p{
+    font-family: 'Inconsolata', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(138, 138, 138);
+    margin-top: 10px;
+}
+#drop-area{
+    width: 370px;
+    height: 150px;
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+}

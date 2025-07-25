@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        fieldset{
+            width: 25%;
+            border-radius: 10px;
+            padding: 5px;
+            transition: all .2s;
+        }
+        legend{
+            padding: 5px;
+            background-color: transparent;
+        }
+        input{
+            padding: 5px;
+            width: 85%;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend style="visibility: hidden;">Email or phone</legend>
+        <input placeholder="Email or phone" onfocus="state1()" onblur="state2()">
+    </fieldset>
+
+    <script>
+        function state1(){
+            document.querySelector("input").removeAttribute("placeholder");
+            document.querySelector("legend").removeAttribute("style");
+            document.querySelector("fieldset").style.borderColor = "blue";
+            document.querySelector("legend").style.visibility = "visible"
+        }
+        function state2() {
+            document.querySelector("fieldset").style.borderColor = "black";
+            document.querySelector("legend").style.color = "black";
+            var take = document.querySelector("input").value;
+            console.log(typeof(take))
+            if (take === "") {
+                document.querySelector("input").setAttribute("placeholder",'Email or phone');
+                document.querySelector("legend").setAttribute("style",'visibility:hidden');
+            }
+        }
+    </script>
+</body>
+</html>

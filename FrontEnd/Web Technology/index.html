@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sytle.css">
+    <title>My Personal Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Viswanadham Godha Ganesh</h1>
+        <div class="date-time">
+            <h3 id="date">00/00/00</h3>
+            <h2 id="time">00:00</h2>
+        </div>
+        <div class="theme-switch-toogle" onclick="tooglemove()"></div>
+    </header>
+    <div class="container">
+        <div class="goal-tracker">
+            <div class="water-goal goal">
+                <h2>Water</h2>
+                <h4><span id="water">0</span> Glasses</h4>
+                <button class="add-btn" onclick="drinkWater()">+</button>
+            </div>
+            <div class="study-goal goal">
+                <h2>Study</h2>
+                <h4><span id="study">0</span> Minutes</h4>
+                <button class="add-btn" onclick="study()">+</button>
+            </div>
+            <div class="workout-goal goal">
+                <h2>Workout</h2>
+                <h4><span id="workout">0</span> Workout</h4>
+                <button class="add-btn"onclick="workout()">+</button>
+            </div>
+            <button class="reset" onclick="reset()"> Reset Today </button>
+        </div>
+        <div class="profile-card">
+            <div class="profile-image">
+                <img src="./images/profile.jpg" alt="Profile Image">
+            </div>
+            <div class="profile-info">
+                <h2>Viswanadham Godha Ganesh</h2>
+                <p>Software Engineer</p>
+                <p>Location: Hyderabad, India</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

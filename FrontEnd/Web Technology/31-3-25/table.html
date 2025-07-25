@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var table = document.createElement('table');
+        table.border = '1';
+        table.cellSpacing= '0';
+        table.cellPadding= '8px';
+
+        var content = [['Fname', 'Lname','Email','Phno','Gender','Place'],['Sai','Kumar','sai@gmail.com','70417686','Male','Hyderabad']];
+
+        for (var i = 0; i < 6; i++) {
+            var row = document.createElement('tr');
+            for (var j = 0; j < 2; j++) {
+                var cell = document.createElement('td');
+                cell.innerHTML = content[j][i];
+                row.appendChild(cell);
+                if(j==0){
+                    cell.style.backgroundColor = "black";
+                    cell.style.color = "red";
+                    cell.style.textAlign = 'center';
+                }
+                if (j==1) {
+                    cell.style.backgroundColor = "lightblue";
+                    cell.style.color = "black";
+                }
+            }
+            table.appendChild(row);
+        }
+
+        document.body.appendChild(table);
+    </script>
+</body>
+
+</html>

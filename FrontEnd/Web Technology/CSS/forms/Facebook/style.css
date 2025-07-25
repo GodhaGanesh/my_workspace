@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    background-color: #f2f4f7;
+}
+img{
+    width: 65%;
+    margin: -26px;
+}
+.enter,#cna,#butt,#fp,p,h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+h2{
+    font-size: 28px;
+    font-weight: 200;
+    padding-left: 30px;
+    margin: 15px 0 0 -28px;
+}
+#outline{
+    padding-top: 72px;
+}
+#inline{
+    display: flex;
+    width: 78%;
+    padding-top: 33px;
+    margin: auto;
+    align-items: center;
+}
+#titlename{
+    padding: 0px 0px 27px;
+    width: 50.1%;
+}
+#login{
+    margin-top: 35px;
+    width: 475px;
+}
+#box{
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-left: 80px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .1), 0px 8px 16px rgba(0, 0, 0, .1);
+}
+.enter{
+    padding: 14px 16px;
+    width: 90%;
+    height: 22px;
+    border: solid 0.5px #dddfe2;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+form .enter:focus{
+    outline: none;
+    border: 0.5px solid #0866ff;
+    caret-color: #0866ff;
+    box-shadow: 0px 0px 0px 2px #0866ff1a;
+}
+#butt{
+    width: 360px;
+    border: none;
+    background-color: #0866ff;
+    color:white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    padding: 14px 16px;
+}
+#fp{
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 115px;
+}
+hr{
+    opacity: 0.3;
+    margin-top: 20px;
+}
+#cna{
+    border: none;
+    background-color: #42b72a;
+    color: #ffffff;
+    font-weight: bolder;
+    border-radius: 8px;
+    margin: 10px 0 10px 85px;
+    padding: 15px;
+    height: 50px;
+}
+input::placeholder{
+    color: #636363;
+    opacity: 0.8;
+}
+input:focus::placeholder{
+    color: #757575;
+    opacity: 0.6;
+}
+#fp:visited{
+    color: #0866ff;
+}
+#fp:hover,#cp:hover{
+    text-decoration: underline;
+}
+p{
+    color: black;
+    font-size: 14px;
+    text-align: right;
+    padding-right: 39px
+}
+#cp{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+a,button{
+    cursor:pointer
+}

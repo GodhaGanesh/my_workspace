@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: skyblue;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        img{
+            width: 30%;
+            align-self: center;
+            justify-self: center;
+            border: 2px solid white;
+        }
+        input{
+            justify-self: bottom ;
+            align-self: center;
+        }
+        #input{
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="../assets/0.jpg" alt="" id="imag">
+    <div id="input">
+        <input type="text" id="width" oninput="imagesize()"><span>*</span><input type="text" id="height" oninput="imagesize()">
+    </div>
+
+    <script>
+        function imagesize(){
+            var verti = document.getElementById("height").value
+            var hori = document.getElementById("width").value
+            document.querySelector("img").style.width = hori;
+            document.querySelector("img").style.height = verti;
+        }
+    </script>
+</body>
+</html>

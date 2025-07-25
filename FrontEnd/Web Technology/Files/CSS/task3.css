@@ -1,0 +1,54 @@
+table thead th{
+    width: 200px;
+    text-align: left;
+    background-color: #202932;
+    color: white;
+    padding-left: 6px;
+    height: 40px;
+    border: solid #2c3845;
+}
+table tr:last-child{
+    text-align: center;
+}
+table tr th:last-child{
+    width: 100px;
+}
+td{
+    padding-left: 6px;
+    border: solid #2c3845;
+}
+table{
+    margin: auto;
+    margin-top: 60px;
+    border-collapse: collapse;
+}
+body{
+    background-color: #5bb9b8;
+}
+table>tbody>tr:nth-child(odd){
+    background-color: #2c3845;
+    color: white;
+    height: 40px;
+}
+table>tbody>tr:nth-child(even){
+    background-color: #202932;
+    color: white;
+    height: 40px;
+}
+button{
+    background-color: #4b908f;
+    color: #fff;
+    height: 20px;
+    width: 50px;
+    border-radius: 4px;
+    border: none;
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+button:active{
+    background-color: #2c5857c1;
+    transform: scale(0.5);
+}

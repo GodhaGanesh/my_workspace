@@ -1,0 +1,45 @@
+thead>tr{
+    background-color: #55608f;
+}
+body{
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    height: 339px;
+}
+table{
+    color: white;
+    border-collapse: collapse;
+    padding-left: 200px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+td,th{
+    width: 100px;
+    height: 30px;
+}
+tbody tr{
+    background-color: #ffffff2a;
+}
+tbody>tr:hover{
+    cursor: pointer;
+    background-color: #ffffff4e;
+}
+thead>tr>th:first-child{
+    border-radius: 6px 0px 0px 0px;
+}
+thead>tr>th:last-child{
+    border-radius: 0px 6px 0px 0px;
+}
+tbody>tr:last-child>td:first-child{
+    border-radius: 0px 0px 0px 6px;
+}
+tbody>tr:last-child>td:last-child{
+    border-radius: 0px 0px 6px 0px;
+}
+th{
+    text-align: left;
+}
+td,th{
+    padding-left: 9px;
+}

@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+}
+#bi{
+    height: 75vh;
+    background-image: url("https://images.pexels.com/photos/5436992/pexels-photo-5436992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+}
+#bb{
+    height: 75vh;
+    background-color: rgb(57, 59, 59);
+}
+/* h1{
+    text-align: center;
+    font-size: 6rem;
+    color: royalblue;
+}
+h1:hover{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1-miiFtMDparfR1p9mB3XsnBsEW-XMy22EQ&s");
+    background-size: contain;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+    
+} */

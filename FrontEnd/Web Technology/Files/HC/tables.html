@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body 
+
+ table th:first-child { border-top-left-radius: 10px; }
+ table th:last-child { border-top-right-radius: 10px; }
+
+        /* Table 1  */
+        .table1 { border-collapse: collapse; width: 100%; }
+        .table1 th, .table1 td { border: 1px solid black; padding: 10px; text-align: center; background-color: #d5642385; }
+        .table1 th { background-color: #d56423; }
+
+        /* Table 2 */
+        .table2 { width: 100%; border-collapse: collapse; color: rgba(36, 3, 93, 0.912);  text-align: center; }
+        .table2 tr{ background-color: #765f5f7c;}
+        .table2 th, .table2 td { padding: 10px; border: 2px solid #ddd; }
+        .table2 tr:nth-child(even) { background-color: #765f5fd2; }
+        .table2 tr:hover { background-color: #f1c40f; color: white; }
+
+        /* Table 3 */
+        .table3 { width: 100%; border-collapse: collapse; text-align: center; }
+        .table3 th, .table3 td { padding: 10px; border: 1px solid black;  }
+        .table3 tr:hover { background-color: #f1c40f; color: white; }
+        .table3 td { background-color: rgba(0, 255, 255, 0.407);  }
+        .table3 th{ background-color: aqua;}
+
+
+        /* Table 4*/
+        .table4  { width: 100%; background-color: #33333356; color: white; text-align: center;}
+        .table4 th, .table4 td { padding: 10px; border: 1px solid white; }
+        .table4 tr td:hover { background-color: #f1c40f; color: white; }
+        .table4 th {  background-color: #8a5e5ef4;}
+
+
+        /* Table 5 */
+        .table5 { width: 100%; border-collapse: separate; border-spacing: 0; }
+        .table5 th, .table5 td { padding: 10px; border: 1px solid black; border-radius: 5px; }
+        .table5 tr:nth-child(even) { background-color: #765f5fd2; }
+        .table5 tr:nth-child(odd){background-color:#392b2bd2 ;}
+
+        /* Table 6 */
+        .table6 { width: 100%; border-collapse: collapse; box-shadow: 5px 5px 10px gray; }
+        .table6 th, .table6 td { padding: 10px; border: 1px solid black; }
+
+
+        /* Table 7 */
+        .table7 { width: 100%; text-align: center; }
+        .table7 th, .table7 td { padding: 10px; border: 1px solid black; }
+        .table7 tr:hover { background-color: #f1c40f; color: white; }
+
+        /* Table 8*/
+        .table8 { width: 100%; border-collapse: collapse; }
+        .table8 th, .table8 td { padding: 10px; border: 2px solid red; }
+
+        /* Table 9 */
+        .table9 { width: 100%; border-collapse: collapse; }
+        .table9 th { background-color: blue; color: white; padding: 10px; }
+        .table9 td { border: 1px solid black; padding: 10px; text-align: center;background-color: rgba(35, 208, 208, 0.79); }
+
+        /* Table 10 */
+        .table10 { width: 100%; border-collapse: collapse; }
+        .table10 th, .table10 td { padding: 10px; border: 1px solid black; }
+        .table10 th { background: linear-gradient(to right, #ff7e5f, #feb47b); color: white; }
+        H2{
+            background-color: rgb(85, 198, 85);
+            color: WHITE;
+            transition-property:background-color  ;
+            text-align: center;
+            transition-duration: 2s;
+        
+        }
+        H2:HOVER{
+            background-color: #d56423;
+            COLOR:BLACK;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <h2>Table 1</h2>
+    <table class="table1">
+        <tr><th>Name</th><th>Age</th><th>Country</th></tr>
+        <tr><td>John</td><td>25</td><td>USA</td></tr>
+        <tr><td>Alice</td><td>30</td><td>UK</td></tr>
+        <tr><td>Bob</td><td>22</td><td>Canada</td></tr>
+    </table>
+
+    <h2>Table 2</h2>
+    <table class="table2">
+        <tr><th>Product</th><th>Price</th><th>Stock</th></tr>
+        <tr><td>Apple</td><td>$1</td><td>100</td></tr>
+        <tr><td>Banana</td><td>$0.5</td><td>150</td></tr>
+        <tr><td>Orange</td><td>$0.8</td><td>120</td></tr>
+    </table>
+
+    <h2>Table 3</h2>
+    <table class="table3">
+        <tr><th>City</th><th>Population</th><th>Country</th></tr>
+        <tr><td>New York</td><td>8M</td><td>USA</td></tr>
+        <tr><td>Los Angeles</td><td>4M</td><td>USA</td></tr>
+        <tr><td>London</td><td>9M</td><td>UK</td></tr>
+    </table>
+
+    <h2>Table 4</h2>
+    <table class="table4">
+        <tr><th>Item</th><th>Quantity</th><th>Price</th></tr>
+        <tr><td>Pens</td><td>10</td><td>$5</td></tr>
+        <tr><td>Notebooks</td><td>5</td><td>$20</td></tr>
+        <tr><td>Erasers</td><td>15</td><td>$3</td></tr>
+    </table>
+
+    <h2>Table 5</h2>
+    <table class="table5">
+        <tr><th>Car</th><th>Year</th><th>Color</th></tr>
+        <tr><td>Tesla</td><td>2023</td><td>Red</td></tr>
+        <tr><td>Ford</td><td>2019</td><td>Blue</td></tr>
+        <tr><td>BMW</td><td>2021</td><td>Black</td></tr>
+    </table>
+
+    <h2>Table 6</h2>
+    <table class="table6">
+        <tr><th>Country</th><th>GDP</th><th>Population</th></tr>
+        <tr><td>USA</td><td>$22T</td><td>331M</td></tr>
+        <tr><td>China</td><td>$16T</td><td>1.4B</td></tr>
+        <tr><td>India</td><td>$3T</td><td>1.3B</td></tr>
+    </table>
+
+    <h2>Table 7</h2>
+    <table class="table7">
+        <tr><th>Company</th><th>Revenue</th></tr>
+        <tr><td>Amazon</td><td>$400B</td></tr>
+        <tr><td>Google</td><td>$280B</td></tr>
+    </table>
+
+    <h2>Table 8</h2>
+    <table class="table8">
+        <tr><th>Animal</th><th>Speed</th></tr>
+        <tr><td>Cheetah</td><td>120 km/h</td></tr>
+        <tr><td>Falcon</td><td>389 km/h</td></tr>
+    </table>
+
+    <h2>Table 9</h2>
+    <table class="table9">
+        <tr><th>Planet</th><th>Size</th></tr>
+        <tr><td>Earth</td><td>6371 km</td></tr>
+        <tr><td>Mars</td><td>3389 km</td></tr>
+    </table>
+
+    <h2>Table 10</h2>
+    <table class="table10">
+        <tr><th>Course</th><th>Duration</th><th>Level</th></tr>
+        <tr><td>Web Development</td><td>6 months</td><td>Intermediate</td></tr>
+        <tr><td>SQL</td><td>1 year</td><td>Advanced</td></tr>
+        <tr><td>CORE JAVA</td><td>8 months</td><td>Expert</td></tr>
+    </table>
+</body>
+</html>

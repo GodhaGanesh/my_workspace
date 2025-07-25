@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        table{
+            font-family: 'Boldonse';
+            border: 1px solid white;
+            margin: auto;
+            color: white;
+        }
+        table td,th{
+            border: white 1px solid;
+            padding: 10px;
+        }
+        tr td:first-child{
+            text-align: right;
+            width: 150px;
+        }
+        tr td:last-child{
+            width: 300px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="heading"></h1>
+    <table cellspacing="0">
+        <tr>
+            <th colspan="2">User Information</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td id="name"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td id="email"></td>
+        </tr>
+        <tr>
+            <td>Number</td>
+            <td id="number"></td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td id="city"></td>
+        </tr>
+        <tr>
+            <td>Pin</td>
+            <td id="pin"></td>
+        </tr>
+        <tr>
+            <td>building</td>
+            <td id="building"></td>
+        </tr>
+    </table>
+    <script src="./dom.js"></script>
+</body>
+</html>

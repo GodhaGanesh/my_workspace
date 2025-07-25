@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Father and Son Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #87CEEB, #f0e68c);
+            font-family: Arial, sans-serif;
+        }
+
+        .scene {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .character {
+            position: absolute;
+            bottom: 20px;
+            width: 100px;
+            height: 150px;
+            background: #FFD700;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .father {
+            left: 50px;
+            animation: fatherMove 6s infinite alternate;
+        }
+
+        .son {
+            right: 50px;
+            animation: sonMove 6s infinite alternate;
+        }
+
+        @keyframes fatherMove {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(100px); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes sonMove {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(-100px); }
+            100% { transform: translateX(0); }
+        }
+
+        .dialogue {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            animation: dialogueFade 6s infinite;
+        }
+
+        @keyframes dialogueFade {
+            0%, 100% { opacity: 0; }
+            25%, 75% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="dialogue">"Son, always follow your dreams."</div>
+        <div class="character father">Father</div>
+        <div class="character son">Son</div>
+    </div>
+</body>
+</html>

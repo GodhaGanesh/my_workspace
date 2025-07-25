@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: space-evenly;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+    color: white;
+    text-shadow: 0px 0px 10px white;
+    user-select: none;
+}
+
+.container {
+    height: 280px;
+    width: 320px;
+    background: transparent;
+    backdrop-filter: blur(10px) brightness(0.8);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    box-shadow: 0px 0px 15px white;
+}
+
+#time {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#date {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+#sec {
+    text-shadow: 0px 0px 10px red;
+    font-family: "Bungee Tint", sans-serif;
+    font-size: 10rem;
+}
+
+#time,
+#date,
+p{
+    font-family: "Teko", sans-serif;
+}
+
+#day {
+    font-family: "Rationale", sans-serif;
+    font-size: 2rem;
+}
+
+span{
+    color: red;
+    text-shadow: 0px 0px 10px red;
+}
+
+.formatchanger{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 130px;
+    height: 50px;
+    backdrop-filter: blur(10px) brightness(0.5);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid white;
+    user-select: none;
+}
+
+label{
+    background-color: blue;
+    height: 25px;
+    width: 50px;
+    border-radius: 100px;
+    position:relative;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+label::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 100px;
+    position: absolute;
+    margin: 2.7px;
+    transition: all 0.5s ease;
+}
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"]:checked + label::before{
+    transform: translateX(25px);
+}
+input[type="checkbox"]:checked + label{
+    background-color: red;
+}
+
+.salutation{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    font-family: "Rationale", sans-serif;
+    color: white;
+    text-shadow: 0px 0px 10px white;
+}
+#greet{
+    margin-top: -10px;
+    margin-left: 15px;
+    font-family: "Merienda", cursive;
+}
+#ap{
+    position: absolute;
+    top: 1px;
+    left: 10px;
+    font-size: 15rem;
+    z-index: -1;
+    color: white;
+    opacity: 0.4;
+    line-height: 300px;
+    text-shadow: 0px 0px 10px skyblue;
+}

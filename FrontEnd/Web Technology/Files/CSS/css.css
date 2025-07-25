@@ -1,0 +1,49 @@
+div ~ p{
+    color: lightsalmon;
+}
+#ui + p{
+    color: dodgerblue;
+}
+#ui{
+    color: sienna;
+}
+button{
+    color: rgb(252, 255, 252);
+    background-color: rgb(128, 0, 255);
+    width: 7%;
+    height: 30px;
+    border-style: none;
+    border-radius: 70px;
+}
+input{
+    border-color: blueviolet;
+    border-radius: 10px;
+}
+
+
+a:link{
+    color: blueviolet;
+    text-decoration: none;
+}
+a:active{
+    color: yellow;
+}
+a:visited{
+    color: red;
+    text-decoration: none;
+}
+h2:hover{
+    text-align: center;
+    text-decoration: underline ;
+    color: red;
+    border: 8px;
+    background-color: aqua;
+}
+div{
+    height: 200px;
+    width: 200px;
+    background-color: black;
+}
+div:hover{
+    border: dotted beige 5px;
+}

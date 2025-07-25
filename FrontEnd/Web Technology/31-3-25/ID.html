@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./id.css">
+</head>
+<body>
+    
+    <script>
+        var id = document.createElement("div");
+        id.className='outbox'
+        document.body.appendChild(id);
+
+        var img = document.createElement("img");
+        img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCa9uo9uUGrEC6Jr_OsvEcJl3J5BNqgRS5SA&s'
+        img.style.borderRadius = '120px'
+        img.style.width = '170px'
+        id.appendChild(img);
+
+        var details = document.createElement("div");
+        details.className = 'details'
+        details.style.width = '55%'
+        id.appendChild(details);
+
+        var inputName = document.createElement("input");
+        inputName.placeholder = 'UserName'
+        inputName.type = 'text';
+        inputName.style.width = '90%';
+        // inputName.style.borderRadius = '20px';
+        // inputName.style.padding = '5px';
+        details.appendChild(inputName);
+
+        var miniDetails = document.createElement("div");
+        miniDetails.style.width = '90%';
+        miniDetails.className = 'miniDetails';
+        details.appendChild(miniDetails);
+
+        var age = document.createElement('input');
+        age.placeholder = 'Age'
+        age.type = 'number';
+        age.style.width = '47.5%';
+        miniDetails.appendChild(age)
+
+        var gender = document.createElement('input');
+        gender.placeholder = 'Gender'
+        gender.type = 'text';
+        gender.style.width = '47.5%';
+        miniDetails.appendChild(gender);
+
+        var feedback = document.createElement("textarea");
+        feedback.placeholder = 'Submit your Feedback'
+        feedback.style.width = '90%';
+        details.appendChild(feedback);
+    </script>
+</body>
+</html>

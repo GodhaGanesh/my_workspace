@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./timer.css">
+</head>
+<body>
+    <img src="https://cdn.pixabay.com/animation/2023/08/10/06/24/06-24-17-858_512.gif" alt="" id="clock">
+    <h2><span id="hours">00</span><span class="tick">:</span><span id="minutes">00</span><span class="tick">:</span><span id="seconds">00</span></h2>
+
+    <script>
+        var hh = document.getElementById("hours");
+        var mm = document.getElementById("minutes");
+        var ss = document.getElementById("seconds");
+        var tick = document.getElementsByClassName("tick");
+        var h = 0, m = 0, s = 0;
+        function updateTime() {
+            s++;
+            if (s == 60) {
+                s = 0;
+                m++;
+                if (m == 60) {
+                    m = 0;
+                    h++;
+                }
+            }
+            ss.innerHTML = (s < 10) ? "0" + s : s;
+            mm.innerHTML = (m < 10) ? "0" + m : m;
+            hh.innerHTML = (h < 10) ? "0" + h : h;
+        }
+        setInterval(updateTime, 1000);
+        setInterval(() => {
+            for (let i = 0; i < tick.length; i++) {
+                tick[i].style.visibility = tick[i].style.visibility === "hidden" ? "visible" : "hidden";
+            }
+        }, 500);
+    </script>
+</body>
+</html>

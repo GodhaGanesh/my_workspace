@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./game.css">
+</head>
+<body>
+    <img src="https://cdn.pixabay.com/animation/2024/04/27/19/29/19-29-06-468_512.gif" alt="">
+
+    <script>
+        var verMove = 0;
+        var horMove = 0;
+        var chr = document.querySelector("img");
+
+        document.addEventListener("keydown",function(e){
+            if(e.key.toLowerCase() == 'w'||e.key.toLowerCase() == 'arrowup'){
+                verMove-=2;
+                chr.style.transform = `translate(${horMove}vw,${verMove}vh)`
+                chr.style.transition = 'all 0.3s'
+                if (verMove==-58) {
+                    verMove=58;
+                    chr.style.transition = 'none'
+                    chr.style.transform = `translate(${horMove}vw,${verMove}vh)`
+                }
+            }
+            if(e.key.toLowerCase() == 's'||e.key.toLowerCase() == 'arrowdown'){
+                verMove+=2;
+                chr.style.transform = `translate(${horMove}vw,${verMove}vh) rotate(180deg)`
+                chr.style.transition = 'all 0.3s'
+                if (verMove==58) {
+                    verMove=-58;
+                    chr.style.transition = 'none'
+                    chr.style.transform = `translate(${horMove}vw,${verMove}vh) rotate(180deg)`
+                }
+            }
+            if(e.key.toLowerCase() == 'a'||e.key.toLowerCase() == 'arrowleft'){
+                horMove-=2;
+                chr.style.transform = `translate(${horMove}vw,${verMove}vh) rotate(-90deg)`
+                chr.style.transition = 'all 0.3s'
+                if (horMove==-58) {
+                    horMove=58;
+                    chr.style.transition = 'none'
+                    chr.style.transform = `translate(${horMove}vw,${verMove}vh) rotate(-90deg)`
+                }
+            }
+            if(e.key.toLowerCase() == 'd'||e.key.toLowerCase() == 'arrowright'){
+                horMove+=2;
+                chr.style.transform = `translate(${horMove}vw,${verMove}vh) rotate(90deg)`
+                chr.style.transition = 'all 0.3s'
+                if (horMove==58) {
+                    horMove=-58;
+                    chr.style.transition = 'none'
+                    chr.style.transform = `translate(${horMove}vw,${verMove}vh) rotate(90deg)`
+                }
+            }
+        })
+    </script>
+</body>
+</html>

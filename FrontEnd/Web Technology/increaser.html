@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./icreaser.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="outline">
+        <div class="display">
+            <h1>0</h1>
+        </div>
+        <div class="controller">
+            <button onclick="increase()" id="start">Start</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.querySelector(".display h1");
+        let count = 0;
+        let i = 1;
+        let intervalId; // Variable to store the interval ID
+        function increase() {
+            if (i % 2 != 0) {
+                document.getElementById("start").innerText = "Stop";
+                intervalId = setInterval(() => {
+                    count++;
+                    display.innerHTML = count;
+                }, 500);
+            } else {
+                document.getElementById("start").innerText = "Start";
+                clearInterval(intervalId); // Use the correct variable
+                display.innerHTML = count;
+            }
+            i++;
+        }
+        function reset() {
+            count = 0;
+            display.innerHTML = count;
+            clearInterval(intervalId); // Clear the interval when resetting
+            document.getElementById("start").innerText = "Start"; // Reset button text
+            i = 1; // Reset the toggle variable
+        }
+    </script>
+</body>
+</html>

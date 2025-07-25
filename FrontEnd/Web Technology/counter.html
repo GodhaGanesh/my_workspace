@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at top left, orange,yellow);
+        }
+        .plate{
+            width: 250px;
+            height: 60px;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 12px;
+            box-shadow: 1px 1px 15px black;
+        }
+        button{
+            font-family: "Oswald", sans-serif;
+            border: none;
+            background-color: transparent;
+            color: yellow;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="plate">
+        <button onclick="dec()">-</button><button>1</button><button onclick="inc()">+</button>
+    </div>
+
+    <script>
+        var x = document.getElementsByTagName("button")
+        var i = 1;
+        x[0].style.opacity = "0.6"
+        function dec(){
+            if (i>1) {
+                i--;
+                x[1].innerHTML=`${i}`
+                x[2].style.opacity = "1";
+            }
+            if(i==1){
+                x[0].style.opacity = "0.6";
+            }
+        }
+        function inc(){
+            if (i<10) {
+                i++;
+                x[1].innerHTML=`${i}`
+                x[0].style.opacity = "1";
+            }
+            if(i==10){
+                x[2].style.opacity = "0.6";
+            }
+        }
+    </script>
+</body>
+</html>

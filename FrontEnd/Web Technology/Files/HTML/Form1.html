@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+</head>
+<body bgcolor="yellow">
+    <center>
+        <form action="">
+            <h3 style="color: red;">Personal Details</h3>
+            <b><label for="N">Name:</label></b>
+            <input type="text" id="N" name="name">
+    
+            <br><br>
+    
+            <b><label for="P">Password:</label></b>
+            <input type="password" id="P" name="Password">
+    
+            <br><br>
+    
+            <b><label for="E">E-mail id:</label></b>
+            <input type="email" id="E" name="E-mail">
+    
+            <br><br>
+    
+            <b><label>Gender:</label></b>
+            <input type="radio" name="Gender">Male
+            <input type="radio" name="Gender">Female
+    
+            <br><br>
+    
+            <b><label for="C">Contact:</label></b>
+            <input type="tel" maxlength="10" id="C" name="Contact">
+    
+            <br><br>
+    
+            <h3 style="color: red;">Educational Qualification</h3>
+            <b><label for="D">Degree:</label></b>
+            <select name="Degree" id="D">
+                <option value="not selected">--selectGroup--</option>
+                <option value="Bsc">Bsc</option>
+                <option value="BA">BA</option>
+                <option value="Bcom">Bcom</option>
+                <option value="BCA">BCA</option>
+                <option value="BZC">BZC</option>
+                <option value="BIO TECH">BIO TECH</option>
+            </select>
+    
+            <br><br>
+    
+            <b><label for="X">Engineering: </label></b>
+            <input type="dropdown" list="L" id="X" name="Engineering">
+            <datalist id="L">
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+                <option value="MEC">MEC</option>
+                <option value="CIVIL">CIVIL</option>
+                <option value="ECE">ECE</option>
+                <option value="IT">IT</option>
+            </datalist>
+    
+            <br><br>
+    
+            <b><label>Hobbies:</label></b>
+            <input type="checkbox" name="Hobbies">Playing chess
+            <input type="checkbox" name="Hobbies">Reading Books
+    
+            <br><br>
+    
+            <h3 style="color: red; display: block;"><label for="A">Address</label></h3>
+            <br>
+            <textarea name="Address" id="A" cols="55" rows="8"></textarea>
+            <br>
+
+            <b><label for="R">Attach Resume:</label></b>
+            <input type="file" name="Resume" id="R">
+    
+            <br><br><br>
+
+            <input type="submit" value="Submit ➡">
+        </form>
+    </center>
+</body>
+</html>

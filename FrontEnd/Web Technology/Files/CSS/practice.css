@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    background-color: purple;
+    top:0px;
+    position: sticky;
+    width: 100%;
+}
+ul li{
+    margin-top: 20px;
+    list-style: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+#ee{
+    background-image: linear-gradient(to left, #ab3030, #c75d08, #c89300, #aaca00, #4aff3c);
+}
+#aa{
+    background-image: linear-gradient(to left, #c60070, #ab1473, #901f73, #74246f, #5a2667);
+}
+#ii{
+    background-image: linear-gradient(to left, #f1ff00, #bee900, #8dd200, #59bb00, #0ca300);
+}
+#uu{
+    background-color: gold;
+}
+div{
+    background-color: #000;
+}
+p{
+    color: gray;
+}

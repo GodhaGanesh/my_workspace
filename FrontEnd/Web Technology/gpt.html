@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Paragraphs on Button Click</title>
+    <style>
+        /* Simple CSS for styling */
+        #paragraphs {
+            display: none; /* Initially hide the paragraphs */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button that triggers the action -->
+    <button onclick="showParagraphs()">Click to Show Paragraphs</button>
+
+    <!-- Paragraphs that will be shown after button click -->
+    <div id="paragraphs">
+        <p>This is the first paragraph.</p>
+        <p>This is the second paragraph.</p>
+        <p>This is the third paragraph.</p>
+    </div>
+
+    <script>
+        // JavaScript function to toggle the visibility of the paragraphs
+        function showParagraphs() {
+            var paragraphs = document.getElementById('paragraphs');
+            
+            // Check if paragraphs are currently hidden
+            if (paragraphs.style.display === 'none') {
+                // Show the paragraphs
+                paragraphs.style.display = 'block';
+            } else {
+                // Hide the paragraphs again
+                paragraphs.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>

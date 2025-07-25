@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        marquee{
+            position: absolute;
+            bottom: 0;
+            transition: all 0.3s;
+        }
+        img{
+            width: 250px;
+        }
+    </style>
+</head>
+<body onkeydown="characterDown()" onkeyup="characterJump()" >
+    <marquee scrollamount="17" direction="right" id="path">
+        <img src="https://i.pinimg.com/originals/15/0d/43/150d4330c799bd6645f7d58e59f0a81b.gif" alt="" >
+    </marquee>
+
+    <script>
+        function characterDown() {
+            document.querySelector("#path").style.transform = "translate(0px ,-90px)";
+        }
+        function characterJump() {
+            document.querySelector("#path").style.transform = "translate(0px ,0px)";
+        }
+    </script>
+</body>
+</html>

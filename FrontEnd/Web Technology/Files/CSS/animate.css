@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+.card{
+    width: 200px;
+    margin: 0 20px 0 20px;
+    /* border: 1px solid red; */
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px 0px #0000007a;
+    position: relative;
+}
+.cardbody{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 7px;
+    position: absolute;
+}
+.cardbody h1{
+    font-size:x-large;
+}
+.image img{
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}

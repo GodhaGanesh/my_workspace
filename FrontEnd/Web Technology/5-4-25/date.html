@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./date.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Rationale&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: space-evenly;
+    background-image: url('https://images.pexels.com/photos/2486168/pexels-photo-2486168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+    color: white;
+    text-shadow: 0px 0px 10px white;
+    user-select: none;
+}
+
+.container {
+    height: 280px;
+    width: 320px;
+    background: transparent;
+    backdrop-filter: blur(10px) brightness(0.8);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    box-shadow: 0px 0px 15px white;
+}
+
+#time {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#date {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+#sec {
+    text-shadow: 0px 0px 10px red;
+    font-family: "Bungee Tint", sans-serif;
+    font-size: 10rem;
+}
+
+#time,
+#date,
+p{
+    font-family: "Teko", sans-serif;
+}
+
+#day {
+    font-family: "Rationale", sans-serif;
+    font-size: 2rem;
+}
+
+span{
+    color: red;
+    text-shadow: 0px 0px 10px red;
+}
+
+.formatchanger{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 130px;
+    height: 50px;
+    backdrop-filter: blur(10px) brightness(0.5);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid white;
+    user-select: none;
+}
+
+label{
+    background-color: blue;
+    height: 25px;
+    width: 50px;
+    border-radius: 100px;
+    position:relative;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+label::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 100px;
+    position: absolute;
+    margin: 2.7px;
+    transition: all 0.5s ease;
+}
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"]:checked + label::before{
+    transform: translateX(25px);
+}
+input[type="checkbox"]:checked + label{
+    background-color: red;
+}
+
+.salutation{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    font-family: "Rationale", sans-serif;
+    color: white;
+    text-shadow: 0px 0px 10px white;
+}
+#greet{
+    margin-top: -10px;
+    margin-left: 15px;
+    font-family: "Merienda", cursive;
+}
+#ap{
+    position: absolute;
+    top: 1px;
+    left: 10px;
+    font-size: 15rem;
+    z-index: -1;
+    color: white;
+    opacity: 0.4;
+    line-height: 300px;
+    text-shadow: 0px 0px 10px skyblue;
+}
+    </style>
+</head>
+<body>
+    <div class="salutation">
+        <h1 id="good">Good</h1>
+        <h1 id="greet"></h1>
+    </div>
+    <div class="formatchanger">
+        <p>12h</p>
+        <input type="checkbox" id="check">
+        <label for="check" onclick="change()"></label>
+        <p>24h</p>
+    </div>
+    <div class="container">
+        <h1 id="time"></h1>
+        <h1 id="date"></h1>
+        <h1 id="day"></h1>
+    </div>
+    <div class="container">
+        <h1 id="sec"></h1>
+    </div>
+
+    <script>
+var i = 0;
+function dateTime() {
+    var date = new Date();
+    
+    var hh = date.getHours();
+    var mm = date.getMinutes();
+    var ss = date.getSeconds();
+    var ms = date.getMilliseconds();
+    var dd = date.getDate();
+    var mo = date.getMonth();
+    var yy = date.getFullYear();
+    var dy = date.getDay();
+
+    if (hh < 12) {
+        document.getElementById("greet").innerHTML = "Morning";
+    }
+    else if (hh < 18) {
+        document.getElementById("greet").innerHTML = "Afternoon";
+    }
+    else if (hh < 20) {
+        document.getElementById("greet").innerHTML = "Evening";
+    }
+    else{
+        document.getElementById("greet").innerHTML = "Night";
+    }
+
+    if (hh < 10) {
+        hh = "0" + hh;
+    }
+    if (mm < 10) {
+        mm = "0" + mm;
+    }
+    if (ss < 10) {
+        ss = "0" + ss;
+    }
+    if (dd < 10) {
+        dd = "0" + dd;
+    }
+
+    if (i%2==0) {
+        var am_pm = "AM";
+
+        if (hh > 12) {
+            hh = hh - 12;
+            am_pm = "PM";
+        }
+        if (hh == 0) {
+            hh = 12;
+            am_pm = "AM";
+        }
+        document.getElementById("time").innerHTML = `${hh}<span>:</span>${mm} <span id="ap">${am_pm}</span>`;
+    }
+    else {
+        document.getElementById("time").innerHTML = `${hh}<span>:</span>${mm}`;
+    }
+
+    var months = ["January", "February", "March", "April", "May", "June","july","August", "September", "October", "November", "December"];
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var dy = days[dy];
+    var mo = months[mo];
+
+    document.getElementById("date").innerHTML = `${dd} <span>${mo}</span> ${yy}`;
+    document.getElementById("day").innerHTML = dy;
+    document.getElementById("sec").innerHTML = ss;
+}
+
+setInterval(dateTime, 1000);
+
+function blink() {
+    document.querySelector("span").style.visibility = (document.querySelector("span").style.visibility == "hidden" ? "" : "hidden");
+}
+setInterval(blink, 250);
+
+function change() {
+    i++;
+}
+
+
+    </script>
+</body>
+</html>

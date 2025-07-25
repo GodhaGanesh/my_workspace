@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+}
+.lopage{
+    height: 100vh;
+    width: 95%;
+    border-radius: 9px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+}
+.login-form {
+    background: white;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    margin: 100px 450px;
+    position: absolute;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover{
+    filter: brightness(0.95);
+}
+.yellow-btn {
+    background-color: #ffcc00;
+}
+.blue-btn {
+    background-color: #007bff;
+    color: white;
+}
+.google-btn, .apple-btn {
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.create-account {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+hr {
+    margin: 20px 0;
+}
+.amazon img{
+    width: 100px;
+}
+.prime{
+    background-color: rgb(25, 149, 247);
+    box-shadow: 0px 0px 20px 7px rgba(25, 151, 247, 0.792);
+}
+.prime>img{
+    margin: 40px;
+    height: 60px;
+}
+.linkedin{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px 7px rgba(255, 255, 255, 0.792);
+}
+.linkedin>img{
+    margin: 40px;
+    height: 60px;
+}
+.google-apple{
+    margin-top: 50px;
+}

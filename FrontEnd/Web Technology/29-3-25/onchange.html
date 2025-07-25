@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select onchange="fun()">
+        <option>red</option>
+        <option>green</option>
+        <option>blue</option>
+        <option>purple</option>
+        <option>brown</option>
+    </select>
+    
+        <input type="text" oninput="forOninput()" id="inp1">
+        <br><br>
+        <span id="span1"></span>
+        <br><br>
+        <input type="text" onchange="forOnchange()" id="inp2">
+        <br><br>
+        <span id="span2"></span>
+
+
+    <script>
+        function fun() {
+            var val = document.querySelector("select").value;
+            document.body.style.backgroundColor = val;
+        }
+        function forOnchange(){
+            var val = document.getElementById("inp1").value;
+            document.getElementById("span1").innerHTML = val;
+        }
+        function forOninput(){
+            var val = document.getElementById("inp2").value;
+            document.getElementById("span2").innerHTML = val;
+        }
+    </script>
+</body>
+</html>

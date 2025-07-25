@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <caption><h1>HTML Form</h1></caption>
+            <tr>
+                <td><b><label for="F">First Name :</label></b></td>
+                <td><input type="text" id="F" name="Fname"></td>
+            </tr>
+            <tr>
+                <td><b><label for="L">Last Name :</label></b></td>
+                <td><input type="text" id="L" name="lname"></td>
+            </tr>
+            <tr>
+                <td><b><label for="D">Date of Birth :</label></b></td>
+                <td><input type="date" id="D" name="Dob"></td>
+            </tr>
+            <tr>
+                <td><b><Label>Gender :</Label></b></td>
+                <td><input type="radio" name="Gender" value="Male">Male 
+                    <input type="radio" name="Gender" value="Female">Female 
+                    <input type="radio" name="Gender" value="Others">Others
+                </td>
+            </tr>
+            <tr>
+                <td><b><label for="E">Email id:</label></b></td>
+                <td><input type="email" id="E" name="Email"></td>
+            </tr>
+            <tr>
+                <td><b><label for="M">Mobile Number :</label></b></td>
+                <td><input type="tel" maxlength="10" id="M" name="PHno"></td>
+            </tr>
+            <tr>
+                <td><b><label for="C">College :</label></b></td>
+                <td><select name="College" id="C">
+                    <option value="Rajah R.S.R.K Ranga Rao degree College">Rajah R.S.R.K Ranga Rao degree College</option>
+                    <option value="S.S.S Degree College">S.S.S Degree College</option>
+                    <option value="S.S college">S.S college</option>
+                    <option value="GITAM college">GITAM college</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><b><label for="A">Address :</label></b></td>
+                <td><textarea name="Add" id="A">Hello World!</textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="checkbox">I hereby declare that the details and information <br> given above are complete and true to the best of my <br> knowledge</td>
+            </tr>
+            <tr>
+                <td colspan="2"><br><br><b><input type="submit" value="Confirm"></b>&ensp;<input type="reset"></td>
+            </tr>
+        </table>
+        
+    </form>
+    <hr>
+
+    <form action="">
+        <label for="T">Name:</label>
+        <input type="color" name="Blue" id="T">
+        <label for="N">Radio:</label>
+        <p><input type="radio" name="jai" id="N">male</p>
+        <label for="B">checkbox:</label>
+        <input type="checkbox" id="B">
+
+        <br>
+        <br>
+
+        <label for="Z">Choose College :</label>
+        <input id="Z" list="Y" name="College" placeholder="Choose College">
+        <datalist id="Y">
+            <option value="Rajah R.S.R.K Ranga Rao degree College">Rajah R.S.R.K Ranga Rao degree College</option>
+            <option value="S.S.S Degree College">S.S.S Degree College</option>
+            <option value="S.S college">S.S college</option>
+            <option value="GITAM college">GITAM college</option>
+        </datalist>
+
+    </form>
+</body>
+</html>

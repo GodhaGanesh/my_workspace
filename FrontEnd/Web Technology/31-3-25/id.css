@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.outbox{
+    width: 500px;
+    height: 250px;
+    background-color: lightblue;
+    clip-path: polygon(15% 0, 100% 0, 100% 75%, 85% 100%, 0 100%, 0 25%);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.miniDetails{
+    display: flex;
+    justify-content: space-between;
+}
+.miniDetails>input{
+    padding: 5px;
+}
+input,textarea{
+    text-align: center;
+    padding: 10px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 1px gray solid;
+    outline-width: 2px;
+    outline-color: blueviolet;
+    outline-offset: 3px;
+}
+textarea{
+    text-align: left;
+}

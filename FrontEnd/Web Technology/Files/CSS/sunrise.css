@@ -1,0 +1,57 @@
+#con{
+    width: 95%;
+    height: 525px;
+    margin: auto;
+    background-color: #f8be40;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+table{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 550;
+    background-color: #e7590000;
+    font-size: small;
+    border-collapse: collapse;
+    margin: auto;
+}
+tr{
+    height: 45px;
+    vertical-align: middle;
+}
+.row_srh{
+    background-color: #e75900;
+    color: #fff;
+}
+.team_logo{
+    width: 25px;
+    margin-right: 15px;
+}
+thead th:nth-child(2){
+    width: 150px;
+}
+thead th{
+    padding-top: 20px;
+    width: 150px;
+    border-bottom: solid #fff;
+    font-size: medium;
+}
+tbody td:first-child,tbody td:nth-child(n+3){
+    text-align: center;
+}
+thead th:first-child{
+    width: 60px;}
+tbody tr:first-child:hover,tbody tr:nth-child(n+3):hover{
+        background-color: #e759004a;
+}
+thead>tr{
+    height: 60px;
+}
+.team_name{
+    vertical-align: middle;
+}
+#title{
+    background-color: #e75900;
+    height: 15px;
+    width: 1020px;
+    left: 0;
+}
