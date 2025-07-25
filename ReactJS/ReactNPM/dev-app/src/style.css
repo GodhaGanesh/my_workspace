@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.component{
+  height: 50px;
+  width: 100%;
+}
+.tc{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+header{
+  background-color: orange;
+}
+nav{
+  background-color: purple;
+}
+footer{
+  background-color: cadetblue;
+}
+.com1{
+  background-color: coral;
+}
+.com2{
+  background-color: turquoise;
+}
+.com3{
+  background-color: sandybrown;
+  min-width: 360px;
+}
+.container{
+  width: 100%;
+  height: calc(100vh - 150px);
+  display: flex;
+  flex-wrap: wrap;
+}
+.partition{
+  width: 50%;
+  min-width: 360px;
+}
+.side-component{
+  width: 100%;
+}
+.side{
+  height: 50%;
+}

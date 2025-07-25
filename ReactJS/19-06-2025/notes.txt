@@ -1,0 +1,35 @@
+innerHTML :- 
+        it has a behaviour of changing to a text node or a element node.
+textContent :-
+        it changes or adds a text node to a tag.
+style :-
+        it's a property where we can apply css dynamically
+
+    Example:
+        let element = document.getElementById('myDiv');
+        element.style.color = 'red';
+        element.style.backgroundColor = 'yellow';
+
+cssText :-
+        when we have more than one style to be added we can a property cssText
+    Example:
+        let element = document.getElementById('myDiv');
+        element.style.cssText = 'color: red; background-color: yellow;';
+
+note :- css properties must follow camelCase
+
+
+Creating an element with the help of dom : -
+
+
+// Creating a new element
+let newElement = document.createElement('p');
+newElement.textContent = 'This is a new paragraph created using DOM.';
+
+// Adding styles to the new element
+newElement.style.color = 'blue';
+newElement.style.fontWeight = 'bold';
+
+// Appending the new element to an existing element in the DOM
+let container = document.getElementById('container');
+container.appendChild(newElement);

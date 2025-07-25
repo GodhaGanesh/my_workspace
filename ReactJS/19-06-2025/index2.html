@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #submit {
+            cursor: pointer;
+            padding: 10px 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            transition: all ease-in-out 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="username"> <br>
+    <input type="password" id="password"> <br>
+    <button id="submit">submit</button>
+
+    <script>
+        let input1 = document.getElementById("username");
+        let input2 = document.getElementById("password");
+        let username;
+        let password;
+        console.log(username);
+
+        document.getElementById("submit").addEventListener('mouseenter',() =>{
+            username = input1.value.trim();
+            password = input2.value.trim();
+            if (username === "" || password === "") {
+                let x = Math.random()*400;
+                let y = Math.random()*400;
+
+                document.getElementById("submit").style.transform = `translate(${x}px,${y}px)`
+            }
+        })
+    </script>
+</body>
+</html>

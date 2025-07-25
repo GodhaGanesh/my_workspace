@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s ease;
+}
+
+:root {
+    --bg: white;
+    --text: black;
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #ffffff;
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin: 5px;
+}

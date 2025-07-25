@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./form.css">
+  </head>
+  <body>
+    <form action="">
+      <h1 style="margin-bottom: 10px;">Registration Page</h1>
+      <input type="text" placeholder="Enter your Name" id="name" /><br />
+      <input
+        type="text"
+        placeholder="Enter your Username"
+        id="username"
+      /><br />
+      <input type="email" placeholder="Enter your mail ID" id="mail" /><br />
+      <input type="password" placeholder="Enter the password" id="pass" /><br />
+      <button id="create">register</button>
+      <p><a href="./login.html">Already have an account</a></p>
+    </form>
+
+    <script>
+      document.getElementById("create").addEventListener("click", () => {
+        let name = document.getElementById("name").value;
+        let userName = document.getElementById("username").value;
+        let mail = document.getElementById("mail").value;
+        let password = document.getElementById("pass").value;
+        localStorage.setItem("name", name);
+        localStorage.setItem("username", userName);
+        localStorage.setItem("email", mail);
+        localStorage.setItem("password", password);
+        name.value = "";
+        userName.value = "";
+        mail.value = "";
+        password.value = "";
+      });
+    </script>
+  </body>
+</html>

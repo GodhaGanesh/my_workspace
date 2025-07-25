@@ -1,0 +1,22 @@
+package vector;
+
+import java.util.ArrayList;
+import java.util.Vector;
+
+public class Vector1 {
+	public static void main(String[] args) {
+		ArrayList a = new ArrayList();
+		a.add(10);
+		a.add("hii");
+		a.add(89);
+		a.add(56);
+		a.add(86);
+		Vector v = new Vector();
+		System.out.println(v.capacity());
+		System.out.println(v.size());
+		v.add(5);
+		v.add(0, "baahubali");
+		v.addAll(a);
+		
+	}
+}

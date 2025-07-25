@@ -1,0 +1,465 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::selection{
+    color: #121212;
+    background-color: #5e5e5e6b;
+}
+body{
+    background-color: #121212 !important;
+}
+nav {
+    backdrop-filter: blur(16px);
+    background-color: rgba(25, 30, 37, .8);
+    width: 96%;
+    height: 60px;
+    padding: 0 21px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3), 0 8px 12px 6px rgba(0, 0, 0, .15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 2%;
+    top: 0;
+    z-index: 3;
+}
+
+.topleft {
+    display: flex;
+    align-items: center;
+}
+.logo{
+    align-items: center;
+}
+.logo i{
+    font-size: 40px;
+    color: gold;
+}
+
+@font-face {
+    font-family: manofa;
+    src: url("../Assests/LEMONMILK-Bold.otf");
+}
+
+.logo h2 {
+    font-family: manofa;
+    font-size: 25px;
+    /* width: 96px; */
+    margin-right: 42px;
+    color: gold;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.user img {
+    width: 33px;
+}
+
+.rounded-btn {
+    border-radius: 100%;
+    padding: 12px;
+}
+.rounded-btn svg{
+    width: 19px;
+    height: 19px;
+}
+nav button {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    height: 42px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    padding: 0 14px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: .1s ease-in-out;
+}
+
+nav button:hover {
+    background: gold;
+    color: black;
+}
+#jp:hover{
+    background-color: rgba(26, 152, 255)!important;
+    color: white;
+    box-shadow:  -4px -4px 20px rgba(26, 152, 255,.3), 4px 4px 20px rgba(26, 152, 255,.3);
+}
+#carouselExampleInterval{
+    margin-top: 70px;
+}
+.w-95{
+    width: 98%;
+    height: 80vh;
+}
+.daaku{
+    background: #000;
+    background: linear-gradient(0deg, #121212 0%, #12121267 50%, rgba(0, 0, 0, 0) 100%),url("https://occ-0-3365-2186.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABW86d2WdmnM_caotVYGX-7Bo1GZzS2n7glgUIxaWNVzm8upwSgV1leDg5aSKe53Xz6ee97kXbWp4fWLv90k7ODyYubkqdImoOEdN.jpg?r=48b");
+    background-position: top;
+    background-size: cover;
+}
+.kantara{
+    background: #000;
+    background: linear-gradient(0deg, #121212 0%, #12121267 50%, rgba(0, 0, 0, 0) 100%),url("https://m.media-amazon.com/images/S/pv-target-images/81b099a5c63de68c4ff26ad9c33ace44dd729b4c131ca707b9d62dba6a2dc328._SX1920_FMwebp_.jpg");
+    background-position: top;
+    background-size: cover;
+}
+.mass{
+    background: #000;
+    background: linear-gradient(0deg, #121212 0%, #12121267 50%, rgba(0, 0, 0, 0) 100%),url("https://origin-staticv2.sonyliv.com/videoasset_images/blitz_assets/1090479027/thumbnail/1746436231147_Maranamass_Landscape_Thumb_Clean.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.salaar{
+    background: #000;
+    background: linear-gradient(0deg, #121212 0%, #12121267 50%, rgba(0, 0, 0, 0) 100%),url("https://img10.hotstar.com/image/upload/f_auto,q_auto/sources/r1/cms/prod/8730/1707996958730-i");
+    background-position: top center;
+    background-size: cover;
+}
+.w-35{
+    width: 35%;
+}
+.header{
+    background-color:#ffffff36;
+    width: 100%;
+    /* border-bottom: 0.5px solid rgba(255, 255, 255, 0.463); */
+    z-index: 5;
+    /* position: fixed;
+    top: 0; */
+    backdrop-filter: blur(10px);
+}
+.holder{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+}
+.holder .bi-list{
+    color: aliceblue;
+    font-size:2rem;
+}
+.holder img{
+    height: 60px;
+    margin-left: 20px;
+}
+.brand{
+    margin-left: 15px;
+}
+.brand h1{
+    color:aliceblue;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 3rem;
+    font-size: 40px;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue,-1px 0 blueviolet, 0 1px blueviolet, 1px 0 blueviolet, 0 -1px blueviolet;
+    background: linear-gradient(120deg, rgba(21, 11, 56, 0.838), hotpink, blueviolet, #4c00ff);
+    background-size: 300% 300%;
+    background-clip: text;
+    color: transparent;
+    animation: aurora 5s infinite linear alternate;
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.5);
+}
+.brand p{
+    color: rgba(240, 248, 255, 0.742);
+    font-size: small;
+    font-weight: lighter;
+    margin-top: -5px;
+    margin-left: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.search{
+    display: flex;
+    border-radius: 100px;
+}
+.search input:focus{
+    box-shadow: 0 0 10px white;
+}
+.search input{
+    height: 25px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.384);
+    border: solid 0.5px white;
+    outline: none;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    caret-color: white;
+    padding: 17px;
+    border-radius: 100px 0 0 100px;
+}
+.search input::placeholder{
+    color: white;
+}
+.search button{
+    height: 35px;
+    width: 60px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.384);
+    border: solid 0.5px white;
+    border-radius: 0 100px 100px 0;
+}
+.other{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-right: 30px;
+}
+.other #acc,#not,#mic{
+    background-color: rgba(255, 255, 255, 0.384);
+    color: white;
+    border: 0.5px solid white;
+    border-radius: 100px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+#mic:hover,#not:hover,#acc:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.search button:hover{
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    color: black;
+    cursor: pointer;
+}
+.other #not,#mic{
+    height: 35px;
+    width: 35px;
+}
+.other #acc{
+    width: 80px;
+}
+.thumb-shadow{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0.42) 40%, rgba(0, 0, 0, 0) 50%);
+}
+.cont{
+    display: flex;
+    justify-content: space-evenly;
+}
+#image{
+    width: 31%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+    border-radius: 13px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+#image:hover{
+    transform: scale(1.08);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.6);
+}
+#image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.804), rgba(0, 0, 0, 0));
+}
+#content h1{
+    font-size: 40px;
+    transition: font-size 0.5s ease;
+}
+#image:hover h1{
+    font-size: 50px;
+}
+.genre{
+    color: rgba(128, 128, 128, 0.804);
+    font-size: 8px;
+    margin-top: -6px;
+}
+.genre:hover{
+    color: rgba(255, 255, 255, 0.705);
+    cursor: pointer;
+    transition-duration: 0.7s;
+}
+.cont img{
+    width: 100%;
+    height: 100%;
+    border-radius: 13px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+#image:hover img{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+#content{
+    position:absolute;
+    bottom: -52px;/*23px*/
+    width: 100%;
+    left: 15px;
+    color: aliceblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: bottom 0.5s ease;
+    z-index: 2;
+}
+#image:hover #content{
+    bottom: 15px;
+}
+#Wt{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 40px;
+    width: 100px;
+    color: white;
+    border: white 1px solid;
+    border-radius: 20px;
+    margin-top: 10px;
+    background-color: transparent;
+    transition: transform 0.3s ease-out;
+}
+#Wt:hover{
+    color: black;
+    background-color: white;
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.bi-badge-4k-fill{
+    color: gold;
+    font-size: 15px;
+    position: absolute;
+    top: 7px;
+    right: 12px;
+}
+.syb{ 
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+.syb{
+    bottom: 0px;
+    right: 70px;
+}
+#image:hover ul{
+    opacity: 1;
+}
+.syb li button{
+    color: white;
+}
+.act{
+    background-color: transparent;
+    border-radius: 100px;
+    border:none;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.5s ease;
+}
+.act:hover{
+    background-color: rgba(255, 255, 255, 0.395);
+    cursor: pointer;
+}
+@keyframes aurora {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+.arrivals{
+    height: 300px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+.runner{
+    display: flex;
+    background-image: url(../../Assests/images/FilmReel.png);
+    background-size: contain;
+    width: calc(250px*18);
+    animation: run 40s linear infinite;
+}
+.runner:hover{
+    animation-play-state: paused;
+}
+@keyframes run {
+    0%{transform: translateX(0);}
+    100%{transform: translateX(calc(-250px*9));}
+}
+.movie-card{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+.movie-card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    box-shadow: 0 0 10px #000;
+}
+.movie-card img:hover{
+    transform: translateZ(15px);
+    cursor: pointer;
+}
+.arrivals::before,
+.arrivals::after,
+.card-animator::before,
+.card-animator::after{
+    background: linear-gradient(to right,#121212,#12121200);
+    content: ' ';
+    height: 100%;
+    width: 15%;
+    z-index: 2;
+    position: absolute;
+}
+.arrivals::before,
+.card-animator::before{
+    top: 0;
+    left: 0;
+}
+.arrivals::after,
+.card-animator::after{
+    top: 0;
+    right: 0;
+    transform: rotateZ(180deg);
+}
+.cate{
+    font-family: 'LemonMilk',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    margin-left: 20px;
+    text-align: center;
+    color: #ffffff8f;
+    font-size: 100px;
+    -webkit-text-stroke: 2px #fff;
+    filter: drop-shadow(0 0 5px #fff);
+}
+h1 img{
+    height: 100px;
+    margin-bottom: -30px;
+    margin-left: -50px;
+}
+@font-face {
+    font-family: 'LemonMilk';
+    src: url(../../Assests/LEMONMILK-Bold.otf);
+}
+/*login form bg color #aec0be */

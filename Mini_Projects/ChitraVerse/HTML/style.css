@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.loading{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: all 0.5s;
+    z-index: 999999;
+    background-image: radial-gradient(circle at top left, #18230F 1% 10%, #feb47b00 40%);
+}
+.salutation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Ms Madi", cursive;
+}
+.salutation h1{
+    color: #1F7D53;
+    text-shadow: 0px 0px 50px #1F7D53;
+    font-size: 3.5rem;
+    font-weight: 500;
+}

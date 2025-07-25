@@ -4,4 +4,5 @@
     <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="bean_programming.Student"/>
     <fullyQualifiedTypeName name="bean_programming.Book"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
 </qualifiedTypeNameHistroy>

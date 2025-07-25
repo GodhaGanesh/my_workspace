@@ -1,8 +1,0 @@
-package list_programs;
-import java.util.ArrayList;
-public class ArrayListProgram {
-	public static void main(String[] args) {
-		ArrayListProgram al = new ArrayListProgram();
-		
-	}
-}

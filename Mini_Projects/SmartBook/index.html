@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SmartBook Reader</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="auth-section">
+        <h2>SmartBook Login</h2>
+        <form><input type="email" id="login-email" placeholder="Email" autocomplete />
+        <input type="password" id="login-password" placeholder="Password" autocomplete />
+        <button id="login-btn">Login</button>
+        <!-- <button  id="register-btn">Register</button> -->
+    </form>
+    <form>
+        <input type="email" id="register-email" placeholder="Email" autocomplete />
+        <input type="password" id="register-password" placeholder="Password" autocomplete />
+        <!-- <button id="login-btn">Login</button> -->
+        <button  id="register-btn">Register</button></form>
+    </div>
+
+    <div id="reader-section" style="display:none;">
+        <button onclick="logout()">Logout</button>
+        <label for="pdf-upload">Upload PDF</label>
+        <input type="file" id="pdf-upload" />
+        <button onclick="toggleTheme()">Toggle Theme</button>
+        <canvas id="pdf-canvas"></canvas>
+        <button onclick="prevPage()">⬅️</button>
+        <button onclick="nextPage()">➡️</button>
+    </div>
+    <!-- Firebase v8 SDKs - use these only -->
+<!-- <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script> -->
+
+    <!-- Firebase SDKs for v9+ -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <!-- Add PDF.js CDN before your custom scripts -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script> -->
+<!-- PDF.js Core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<!-- Manually set the worker source -->
+<script>
+    window.pdfjsLib = window['pdfjs-dist/build/pdf'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+</script>
+
+
+
+    <!-- <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script> -->
+    <script src="firebase-config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

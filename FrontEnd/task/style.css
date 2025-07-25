@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+}
+body{
+    background-color: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'ZeeFont';
+}
+@font-face {
+    font-family: 'ZeeFont';
+    src: url('./assests/WDXLLubrifontTC-Regular.ttf');
+}
+.formbody{
+    height: 400px;
+    width: 300px;
+    background-color: #fcfcfc;
+    border-radius: 15px;
+}
+form{
+    height: 400px;
+    width: 300px;
+    padding: 30px;
+    position: relative;
+}
+h1{
+    font-size: 30px;
+}
+h1,p{
+    text-align: center;
+}
+.social-media-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 27%;
+    gap: 17px;
+}
+.social-media-login img{
+    width: 35px;
+}
+.main-login{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 35px 0;
+    border-top: gray 1px solid;
+}
+.main-login input{
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: gray solid 1px;
+}
+.main-login input:focus{
+    outline: rgb(162, 96, 162) solid 2px;
+    outline-offset: 2px;
+}
+.main-login button{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(162, 96, 162);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.main-login p{
+    margin-top: -10px;
+}
+.dash-or{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 45%;
+    top: 45%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fcfcfc;
+}
+p>a{
+    text-decoration: none;
+    color: rgb(162, 96, 162);
+}

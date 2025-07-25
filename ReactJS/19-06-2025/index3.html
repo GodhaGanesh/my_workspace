@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let h1tag = (document.createElement("h1").innerHTML =
+            "welcome to Jspiders");
+        let container = document.createElement("div").appendChild(h1tag);
+        container.id = "container";
+        container.appendChild(
+            (document.createElement("p").innerHTML =
+                "we teach <em>java</em> FullStack and <em>python</em> fullstack")
+        );
+
+        let button = (document.createElement("button").innerHTML = "Enroll");
+        button.className = "btn";
+        container.appendChild(button);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./form.css">
+  </head>
+  <body>
+    <form action="">
+      <h1 style="margin-bottom: 10px;">Login Page</h1>
+      <input type="email" placeholder="Enter your mail ID" id="mail" /><br />
+      <input type="password" placeholder="Enter the password" id="pass"/><br />
+      <button id="btn-login">Login</button>
+      <p>new user? <a href="./register.html">Create account</a></p>
+    </form>
+
+    <script>
+      document.getElementById("btn-login").addEventListener("click", ()=>{
+        let email = document.getElementById("mail").value;
+        let pass = document.getElementById("pass").value;
+        if(email === localStorage.getItem("email") && pass === localStorage.getItem("password"))
+          window.open("./homepage.html");
+        else{
+          alert("invalid credentials!!!");
+        }
+      })
+    </script>
+  </body>
+</html>

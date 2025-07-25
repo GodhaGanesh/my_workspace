@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Are You a Fool ?</h1>
+    <button id="yesBtn">Yes</button> &nbsp; <button id="noBtn" style="position:relative;">No</button>
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        noBtn.addEventListener('mouseenter', function () {
+            // Generate random positions within the viewport
+            const bodyRect = document.body.getBoundingClientRect();
+            const btnRect = noBtn.getBoundingClientRect();
+            const maxLeft = window.innerWidth - btnRect.width - 20;
+            const maxTop = window.innerHeight - btnRect.height - 20;
+            const left = Math.random() * 1000;
+            const top = Math.random() * 500;
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = left + 'px';
+            noBtn.style.top = top + 'px';
+        });
+    </script>
+</body>
+</html>
