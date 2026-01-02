@@ -1,0 +1,36 @@
+# Base formatting style
+BasedOnStyle: LLVM
+
+# Indentation
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# Braces
+BreakBeforeBraces: Attach
+
+# Column limit
+ColumnLimit: 100
+
+# Pointer alignment: type* var
+PointerAlignment: Left
+
+# Space settings
+SpaceBeforeParens: ControlStatements
+SpacesInParentheses: false
+SpacesInCStyleCastParentheses: false
+
+# Align consecutive declarations
+AlignConsecutiveDeclarations: false
+AlignConsecutiveAssignments: true
+
+# Keep include order clean
+SortIncludes: true
+IncludeBlocks: Regroup
+
+# Control flow formatting
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+
+# Disable C++ features (helps keep style C-friendly)
+Cpp11BracedListStyle: false
