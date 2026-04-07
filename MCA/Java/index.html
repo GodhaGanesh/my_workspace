@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(0, 0, 0);
+            position: relative;
+        }
+        .light1{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: orange;
+            position: absolute;
+            top: -20%;
+            right: -20%;
+            filter: blur(50px);
+        }
+        .light2{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: green;
+            position: absolute;
+            bottom: -20%;
+            left: -20%;
+            filter: blur(50px);
+        }
+        .form{
+            height: 300px;
+            width: 250px;
+            position: absolute;
+            top: calc(50% - 125px);
+            left: calc(50% - 100px);
+            background-color: rgba(28, 28, 28, 0.604);
+            overflow: hidden;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        #head{
+            font-size: 20px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .input{
+            outline:none;
+            margin: 5px 0;
+            height: 40px;
+            width: 100%;
+            padding: 10px;
+            color: white;
+            caret-color: white;
+            background-color: transparent;
+            border-radius: 10px;
+            border: 1px white solid;
+        }
+        .input:focus{
+            border: 2px orangered solid;
+        }
+        .fp{
+            color: green;
+            font-size: 12px;
+            align-self: flex-start;
+        }
+        .nr{
+            color: green;
+            font-size: 15px;
+        }
+        .nr > a{
+            color: orangered;
+        }
+        #sbt-btn{
+            padding: 10px;
+            border-radius: 15px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <form action="" class="form">
+            <h1 id="head">login</h1>
+            <div class="light1"></div>
+            <div class="light2"></div>
+            <input type="username" placeholder="Username" class="input">
+            <input type="password" placeholder="Password" class="input">
+            <a href="" class="fp">forget password</a>
+            <p class="nr">Not Registered? <a href="">Sign Up</a></p>
+            <input type="submit" id="sbt-btn">
+        </form>
+    </div>
+</body>
+</html>
