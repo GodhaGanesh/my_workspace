@@ -5,4 +5,6 @@
     <fullyQualifiedTypeName name="bean_programming.Student"/>
     <fullyQualifiedTypeName name="bean_programming.Book"/>
     <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 </qualifiedTypeNameHistroy>

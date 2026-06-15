@@ -1,0 +1,11 @@
+Student_ID,Age,Gender,Education_Level,City,AI_Tool_Used,Daily_Usage_Hours,Purpose,Impact_on_Grades,Satisfaction_Level
+91,16,Female,College,Islamabad,Copilot,3.9,Writing,No Change,Low
+92,16,Female,University,Lahore,Grammarly,3,Learning,Improved,Medium
+93,21,Male,School,Multan,Notion AI,2.4,Coding,Improved,High
+94,21,Female,School,Islamabad,Grammarly,3.9,Homework,Improved,Low
+95,23,Male,School,Multan,Gemini,5,Research,Improved,High
+96,16,Female,School,Multan,Grammarly,5,Learning,Slight Decline,Medium
+97,25,Female,School,Faisalabad,Gemini,1.9,Writing,No Change,Medium
+98,17,Female,College,Faisalabad,Gemini,2.9,Writing,No Change,Low
+99,15,Female,College,Lahore,Notion AI,3.6,Homework,Slight Decline,High
+100,24,Female,School,Multan,Gemini,2.7,Learning,Improved,High
